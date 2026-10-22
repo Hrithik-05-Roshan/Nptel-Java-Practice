@@ -60,6 +60,54 @@ footer{padding:29px 0 36px;color:#8B97A8;font-size:11px}.foot-inner{display:flex
 @media(max-width:900px){.hero-grid{grid-template-columns:1fr .85fr;gap:23px}.hero-art{min-height:360px}.course-paper{padding:22px}.feature-grid{gap:12px}.feature-card{padding:19px 17px}.exam-grid{grid-template-columns:1fr}.exam-facts{grid-template-columns:1fr 1fr}}
 @media(max-width:700px){.wrap{width:min(100% - 28px,560px)}.nav{min-height:66px}.navlinks{display:none}.navactions .btn.ghost{display:none}.brand-mark{width:38px;height:38px}.hero{padding:38px 0 14px}.hero-grid{grid-template-columns:1fr;gap:7px}.hero-copy{font-size:14px}.hero-art{min-height:355px;margin:5px 0}.course-paper{width:min(330px,84%)}.note-free{right:1%}.note-score{left:1%}.note-learn{right:0}.ribbon-grid{grid-template-columns:1fr;gap:8px}.ribbon-card{padding:12px}.section{padding:37px 0}.section-head{align-items:flex-start;flex-direction:column}.feature-grid{grid-template-columns:1fr;gap:14px;padding:0 4px}.feature-card{min-height:0}.exam-area{padding:12px}.exam-paper{padding:19px}.exam-facts{grid-template-columns:1fr 1fr;gap:8px}.fact{padding:12px}.session{grid-template-columns:38px 1fr;gap:9px}.session time{grid-column:2}.grade-grid,.cert-grid{grid-template-columns:1fr;gap:14px}.grade-card{padding:18px}.eligibility-alert{padding:14px}.bottom-cta{flex-direction:column;align-items:flex-start;padding:22px}.bottom-cta .btn{width:100%}.foot-inner{align-items:flex-start;flex-direction:column}.hero h1{font-size:clamp(39px,12vw,57px)}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+/* Minimal papercraft refinement: calm palette, aligned surfaces, less decoration */
+:root{--bg:#10141B;--ink:#202938;--paper:#F3F4F6;--paper2:#F8FAFC;--muted:#A6AFBD;--line:#2C3442;--blue:#A7BFE8;--deep:#263B5B;--yellow:#D8E0EC;--coral:#B8C5D8;--mint:#C8D2DF;--lilac:#D8DDE6;--sky:#C9D5E5;--shadow:0 5px 0 #080B10}
+a:focus-visible,button:focus-visible{outline:2px solid #A7BFE8}
+.brand-mark{background:#D8E0EC;color:#202938;box-shadow:3px 3px 0 #65758D;transform:none}
+.btn{border-radius:7px;transition:background .15s,border-color .15s,transform .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn.primary,.btn.paper-blue{background:#D8E0EC;color:#202938;border:1px solid #D8E0EC;box-shadow:none}
+.btn.primary:hover,.btn.paper-blue:hover{background:#E8EDF4;box-shadow:none;transform:translateY(-1px)}
+.kicker,.section-label{color:#A7BFE8}
+h1 .highlight{color:#DCE5F2}
+h1 .highlight:after{height:3px;background:#6E819D}
+.hero-art{min-height:350px}
+.course-paper{background:#F3F4F6;transform:rotate(1deg);box-shadow:0 5px 0 #080B10}
+.course-paper:before{background:#D8DDE6;transform:translate(6px,7px) rotate(-2deg)}
+.stamp{background:#E1E7EF}
+.floating-note{box-shadow:3px 3px 0 #080B10;border-width:1px}
+.note-free,.note-score,.note-learn{background:#E1E7EF;transform:none}
+.doodle{display:none}
+.ribbon-card{background:#171D27;border-color:#2C3442;border-radius:7px}
+.ribbon-card .iconbox,.ribbon-card:nth-child(1) .iconbox,.ribbon-card:nth-child(2) .iconbox,.ribbon-card:nth-child(3) .iconbox{background:#252F40;color:#D8E0EC;border:1px solid #3A4659;box-shadow:none}
+.feature-grid{gap:14px}
+.feature-card,.feature-card:nth-child(1),.feature-card:nth-child(2),.feature-card:nth-child(3){background:#F3F4F6;transform:none;box-shadow:0 4px 0 #080B10;border:1px solid #30394A}
+.feature-card .feature-icon{background:#E1E7EF;border:1px solid #C6CED9;box-shadow:none}
+.feature-card:after{display:none}
+.exam-area{border-radius:9px}
+.exam-paper{box-shadow:0 4px 0 #080B10}
+.exam-paper:before{background:#D8DDE6;height:3px}
+.session .session-icon,.session:nth-child(2) .session-icon{background:#E1E7EF}
+.fact .fact-icon,.detail-icon{background:#252F40;color:#C8D6EB}
+.notice{background:#1C2431;border:1px solid #364153}
+.notice svg,.notice a{color:#C8D6EB}
+.grade-bar{box-shadow:none;border:1px solid #364153}
+.grade-bar .assignment-part{background:#9DAEC8;border-right:1px solid #364153}
+.grade-bar .exam-part{background:#586B89}
+.grade-card,.grade-card.assignment,.grade-card.exam{background:#E9EDF2;transform:none;box-shadow:0 4px 0 #080B10}
+.grade-card .grade-icon{background:#F8FAFC}
+.grade-number{color:#273A58}
+.eligibility-alert{background:#202731;border-color:#485365}
+.eligibility-alert svg{color:#C8D6EB}
+.eligibility-alert b{color:#F1F4F8}
+.eligibility-alert p{color:#C0C8D4}
+.cert-paper{box-shadow:0 4px 0 #080B10;transform:none}
+.logo-stub,.logo-stub:nth-child(2){background:#E1E7EF}
+.bottom-cta{background:#E9EDF2;box-shadow:0 4px 0 #080B10;transform:none;border-radius:7px}
+.bottom-cta .btn{background:#202938;color:#F3F4F6;border-color:#202938;box-shadow:none}
+@media(max-width:700px){.hero-art{min-height:315px}.note-free,.note-score,.note-learn{padding:9px 10px;font-size:10px}.course-paper{width:min(330px,88%)}}
+
 </style>
 </head>
 <body>
