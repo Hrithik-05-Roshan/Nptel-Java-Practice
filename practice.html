@@ -1,0 +1,1342 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#10141F" />
+<title>MCQ Practice | NPTEL Java Exam Prep</title>
+<style>
+:root{--bg:#090c12;--panel:#10151f;--panel2:#141b27;--panel3:#192333;--line:#263244;--text:#f2f5fb;--muted:#8c9aaf;--cyan:#69e1ef;--cyan2:#29b9ce;--lime:#b9f36a;--orange:#ffbc70;--red:#ff828a;--purple:#ac9bff;--radius:18px;--shadow:0 18px 50px #0005}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 60% -10%,#173344 0,transparent 38%),var(--bg);color:var(--text);font:14px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh}button,input{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}.app{display:grid;grid-template-columns:260px minmax(0,1fr);min-height:100vh}.sidebar{height:100vh;position:sticky;top:0;border-right:1px solid var(--line);background:#0b1018eF;padding:22px 15px 16px;display:flex;flex-direction:column;overflow:hidden}.brand{display:flex;align-items:center;gap:11px;padding:0 9px 24px}.brand-mark{display:grid;place-items:center;width:39px;height:39px;background:linear-gradient(135deg,var(--cyan),#a8f0bf);border-radius:13px;color:#071017;font-weight:950;letter-spacing:-2px;font-size:15px;box-shadow:0 8px 26px #39c9d52b}.brand-name{font-size:13px;font-weight:850;letter-spacing:.12em}.brand-sub{font-size:10px;color:var(--muted);letter-spacing:.13em;margin-top:1px}.course-chip{margin:0 7px 17px;padding:14px;border-radius:15px;border:1px solid #29434d;background:linear-gradient(135deg,#122630,#121a26)}.tiny-label{color:var(--cyan);font-size:10px;letter-spacing:.14em;font-weight:800;text-transform:uppercase}.course-chip h3{margin:6px 0 3px;font-size:14px}.course-chip p{margin:0;color:var(--muted);font-size:11px}.side-progress{height:4px;border-radius:20px;background:#263443;margin-top:13px;overflow:hidden}.side-progress span{display:block;height:100%;background:var(--lime);width:0;transition:width .2s}.section-label{font-size:10px;color:#728198;text-transform:uppercase;letter-spacing:.14em;font-weight:800;padding:5px 12px 8px}.week-nav{overflow:auto;min-height:0;padding:0 2px;scrollbar-width:thin;scrollbar-color:#354256 transparent}.week-btn{width:100%;display:flex;align-items:center;gap:10px;padding:10px 10px;margin:3px 0;border:1px solid transparent;border-radius:11px;background:transparent;color:#b5c1d2;text-align:left;transition:.18s}.week-btn:hover{background:#151e2a;color:white}.week-btn.active{background:linear-gradient(90deg,#17343d,#152530);border-color:#28505a;color:#f5feff}.week-dot{width:22px;height:22px;border:1px solid #354357;border-radius:7px;display:grid;place-items:center;font-size:10px;font-weight:800;flex:0 0 auto}.week-btn.active .week-dot{background:var(--cyan);border-color:var(--cyan);color:#081117}.week-info{min-width:0;flex:1}.week-info strong{display:block;font-size:12px;font-weight:720}.week-info span{display:block;color:#78869a;font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.week-count{font-size:10px;color:#65758b}.side-bottom{margin-top:auto;padding:17px 8px 0}.keyboard-note{border-top:1px solid var(--line);padding:14px 7px 0;color:#77859a;font-size:10px}.key{padding:2px 5px;border:1px solid #354154;border-radius:4px;color:#b2bdcc;background:#131a25;font-size:10px}
+.main{min-width:0;padding:24px clamp(18px,3vw,46px) 42px;max-width:1600px;width:100%;margin:0 auto}.topbar{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:27px}.breadcrumb{display:flex;align-items:center;gap:9px;color:#77859a;font-size:11px}.breadcrumb strong{color:#d5deeb;font-weight:650}.top-actions{display:flex;align-items:center;gap:9px}.status-pill{display:flex;align-items:center;gap:7px;border:1px solid var(--line);padding:7px 10px;border-radius:30px;color:#afbdd0;font-size:11px;background:#0d131c}.status-dot{width:7px;height:7px;background:var(--lime);border-radius:50%;box-shadow:0 0 12px #b9f36a7a}.icon-btn{border:1px solid var(--line);background:#111823;color:#b9c5d5;padding:8px 11px;border-radius:10px}.hero{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:23px}.eyebrow{font-size:10px;letter-spacing:.19em;color:var(--cyan);font-weight:850;text-transform:uppercase;display:flex;align-items:center;gap:8px}.eyebrow:before{content:"";width:20px;height:1px;background:var(--cyan)}h1{font-size:clamp(27px,3.2vw,42px);line-height:1.08;letter-spacing:-.045em;margin:10px 0 11px;font-weight:850}h1 .accent{color:var(--cyan)}.hero p{color:var(--muted);margin:0;max-width:620px;font-size:13px}.hero-right{display:flex;gap:9px;flex-wrap:wrap;justify-content:flex-end}.btn{border:1px solid var(--line);padding:10px 14px;border-radius:11px;color:#dce5f2;background:#141b27;font-size:12px;font-weight:750;transition:.15s}.btn:hover{border-color:#60768b;transform:translateY(-1px)}.btn.primary{background:var(--cyan);border-color:var(--cyan);color:#071117}.btn.ghost{background:transparent}.btn.warn{color:var(--orange)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:26px}.stat-card{border:1px solid var(--line);border-radius:15px;background:linear-gradient(145deg,#111823,#0e131c);padding:16px 17px;position:relative;overflow:hidden}.stat-card:after{content:"";position:absolute;top:-31px;right:-31px;width:90px;height:90px;border-radius:50%;background:var(--glow,#69e1ef);opacity:.065;filter:blur(1px)}.stat-label{display:flex;align-items:center;gap:7px;color:#95a3b7;font-size:11px}.stat-icon{width:25px;height:25px;border-radius:8px;display:grid;place-items:center;background:#1b2c35;color:var(--cyan);font-weight:900}.stat-value{font-size:26px;font-weight:850;letter-spacing:-.04em;margin-top:9px;line-height:1.1}.stat-note{font-size:10px;color:#68788e;margin-top:7px}.stat-note b{color:var(--lime);font-weight:700}.section-head{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:13px}.week-title-wrap{display:flex;align-items:center;gap:13px}.week-badge{width:46px;height:46px;border:1px solid #28535b;background:linear-gradient(145deg,#14323b,#13212c);display:grid;place-items:center;border-radius:14px;color:var(--cyan);font-size:14px;font-weight:900}.section-head h2{font-size:20px;letter-spacing:-.025em;margin:0}.section-head p{margin:3px 0 0;color:var(--muted);font-size:11px}.week-status{font-size:10px;color:var(--lime);background:#b9f36a0d;border:1px solid #b9f36a30;padding:7px 10px;border-radius:9px;white-space:nowrap}.toolbar{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:10px;border:1px solid var(--line);border-radius:14px;background:#0e141d;margin-bottom:15px}.filters{display:flex;gap:4px;flex-wrap:wrap}.filter-btn{border:1px solid transparent;background:transparent;color:#8290a4;padding:8px 11px;border-radius:9px;font-size:11px;font-weight:700}.filter-btn.active{color:#e9fcff;background:#1a3038;border-color:#294851}.toolbar-right{display:flex;align-items:center;gap:9px}.search{width:min(220px,40vw);background:#121a25;color:#eaf0f7;border:1px solid #283548;border-radius:9px;padding:8px 10px;font-size:11px}.mode-select{background:#121a25;border:1px solid #283548;border-radius:9px;color:#b9c5d5;padding:8px 10px;font-size:11px}
+.practice-layout{display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:15px;align-items:start}.question-panel,.right-panel{border:1px solid var(--line);background:linear-gradient(145deg,#111823,#0e131b);border-radius:17px;overflow:hidden}.question-top{padding:19px 21px 15px;display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid #202a38}.q-meta{display:flex;align-items:center;gap:7px;flex-wrap:wrap}.small-tag{font-size:9px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#92a5ba;background:#1b2635;border:1px solid #2b384a;border-radius:6px;padding:4px 7px}.small-tag.source{color:#91edf5;border-color:#29515a;background:#12252d}.small-tag.marked{color:var(--orange);border-color:#5a4731;background:#271e15}.q-count{font-size:11px;color:#8391a5}.q-progress{height:3px;background:#222e3d}.q-progress span{display:block;height:100%;background:linear-gradient(90deg,var(--cyan),var(--lime));transition:width .25s}.question-body{padding:23px 22px 19px}.question-title{font-size:18px;line-height:1.48;letter-spacing:-.02em;font-weight:720;margin:0 0 19px}.code-box{padding:15px 17px;background:#090e15;border:1px solid #293747;border-radius:11px;margin:-4px 0 20px;overflow:auto;max-width:100%}.code-box pre{margin:0;white-space:pre-wrap;color:#c9dae8;font:12px/1.65 "SFMono-Regular",Consolas,monospace}.code-box .kw{color:#76d9e6}.code-box .str{color:#b9f36a}.code-box .comment{color:#71829a}.options{display:grid;gap:9px}.option{width:100%;display:flex;align-items:flex-start;gap:12px;text-align:left;background:#121a25;border:1px solid #283547;border-radius:11px;padding:12px 13px;color:#c9d3e0;transition:.15s}.option:hover:not(:disabled){border-color:#526579;background:#16212e}.option-letter{flex:0 0 25px;height:25px;display:grid;place-items:center;border:1px solid #354458;border-radius:7px;color:#9cacc0;font-weight:850;font-size:11px;background:#0f1620}.option-text{flex:1;padding-top:2px;font-size:12px;line-height:1.5}.option-check{color:var(--lime);font-size:14px;margin-left:auto;display:none}.option.selected{border-color:#5aabb7;background:#142b34}.option.selected .option-letter{border-color:var(--cyan);background:var(--cyan);color:#051217}.option.correct{border-color:#547f3f;background:#182519}.option.correct .option-letter{color:#10200c;background:var(--lime);border-color:var(--lime)}.option.correct .option-check{display:block}.option.wrong{border-color:#87474d;background:#2a1a20}.option.wrong .option-letter{background:var(--red);color:#23080b;border-color:var(--red)}.option.wrong .option-check{display:block;color:var(--red)}.option:disabled{cursor:default}.feedback{margin-top:15px;border-radius:11px;padding:14px 15px;display:none;border:1px solid #304152;background:#121d29}.feedback.show{display:block}.feedback.good{border-color:#426633;background:#172318}.feedback.bad{border-color:#714046;background:#26191e}.feedback-title{font-weight:850;font-size:12px;margin-bottom:4px}.feedback.good .feedback-title{color:var(--lime)}.feedback.bad .feedback-title{color:var(--red)}.feedback p{margin:0;color:#b5c2d2;font-size:12px}.question-footer{padding:15px 21px;display:flex;justify-content:space-between;align-items:center;gap:10px;border-top:1px solid #202a38;background:#0e141d}.footer-left,.footer-right{display:flex;gap:8px;align-items:center}.text-btn{border:0;color:#9baabd;background:transparent;font-size:11px;font-weight:720;padding:8px 4px}.text-btn:hover{color:white}.review-btn{background:transparent;border:1px solid #344255;border-radius:9px;padding:8px 10px;color:#aab7c8;font-size:11px}.review-btn.active{color:var(--orange);border-color:#675034;background:#261e15}.next-btn{padding:9px 14px;border-radius:9px;background:var(--cyan);border:0;color:#071217;font-size:11px;font-weight:850}.right-panel{padding:17px}.right-title{font-size:12px;font-weight:800;margin:0 0 13px;display:flex;align-items:center;justify-content:space-between}.palette{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}.palette-btn{aspect-ratio:1;border:1px solid #2a3748;border-radius:8px;background:#121a25;color:#98a7bb;font-size:11px;font-weight:750}.palette-btn:hover{border-color:#607185}.palette-btn.current{border-color:var(--cyan);background:#1a3941;color:#eaffff;box-shadow:0 0 0 1px #69e1ef26}.palette-btn.answered{background:#25352a;border-color:#3b5b38;color:var(--lime)}.palette-btn.incorrect{background:#2b1e24;border-color:#6b3b43;color:var(--red)}.palette-btn.reviewed:after{content:"•";color:var(--orange);font-size:13px;margin-left:1px}.legend{display:flex;flex-wrap:wrap;gap:9px;margin:12px 0 17px;color:#8291a5;font-size:10px}.legend span{display:flex;align-items:center;gap:5px}.legend i{display:inline-block;width:8px;height:8px;border-radius:3px;background:#25352a;border:1px solid #3b5b38}.legend .leg-current{background:#1a3941;border-color:var(--cyan)}.legend .leg-review{background:#261e15;border-color:#675034}.divider{height:1px;background:#253141;margin:15px 0}.week-progress-header{display:flex;align-items:end;justify-content:space-between;margin-bottom:9px}.week-progress-header strong{font-size:20px;letter-spacing:-.04em}.week-progress-header span{font-size:10px;color:#8c9aaf}.mini-progress{height:6px;border-radius:50px;background:#273343;overflow:hidden}.mini-progress span{display:block;height:100%;background:linear-gradient(90deg,var(--cyan),var(--lime));width:0;transition:width .2s}.right-note{margin-top:17px;color:#718198;font-size:10px;line-height:1.7}.right-note b{color:#a6b4c6}.empty-state{padding:48px 20px;text-align:center;color:#8b9bb0}.empty-state strong{display:block;font-size:15px;color:#e1e9f4;margin:8px}.empty-state p{font-size:12px}.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);background:#e9f8fa;color:#071217;padding:10px 14px;border-radius:10px;font-size:12px;font-weight:800;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:.2s;z-index:9}.toast.show{opacity:1;transform:translate(-50%,0)}.mobile-menu{display:none}.footer-note{color:#596980;font-size:10px;text-align:center;padding-top:23px}.footer-note a{color:#8499ad}
+@media(max-width:1120px){.practice-layout{grid-template-columns:minmax(0,1fr) 220px}.main{padding-left:22px;padding-right:22px}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:820px){.app{grid-template-columns:1fr}.sidebar{height:auto;position:relative;border-right:0;border-bottom:1px solid var(--line);padding:12px 14px}.brand{padding:0 5px 11px}.course-chip{display:none}.section-label,.side-bottom{display:none}.week-nav{display:flex;gap:7px;overflow-x:auto;padding:3px 0 5px}.week-btn{width:auto;min-width:145px;margin:0;padding:8px}.week-info span,.week-count{display:none}.week-btn .week-dot{width:25px;height:25px}.main{padding:20px 14px 30px}.topbar{margin-bottom:22px}.practice-layout{grid-template-columns:1fr}.right-panel{order:2}.hero{align-items:flex-start;flex-direction:column}.hero-right{justify-content:flex-start}.stats{gap:8px}.stat-card{padding:13px}.stat-value{font-size:23px}.right-panel{padding:14px}.palette{grid-template-columns:repeat(10,1fr)}.top-actions .status-pill{display:none}}
+@media(max-width:480px){.breadcrumb{font-size:10px}.topbar{gap:8px}.hero h1{font-size:29px}.hero p{font-size:12px}.hero-right .btn{padding:8px 10px}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.section-head{align-items:flex-start}.week-status{display:none}.toolbar{align-items:stretch}.toolbar-right{width:100%;justify-content:space-between}.search{width:58%}.mode-select{max-width:42%}.question-top{padding:15px}.question-body{padding:18px 14px}.question-title{font-size:16px}.option{padding:10px}.question-footer{padding:13px 14px}.footer-left .text-btn{display:none}.palette{grid-template-columns:repeat(6,1fr)}.footer-right{margin-left:auto}.code-box pre{font-size:11px}}
+
+/* Minimal focus theme */
+:root{--bg:#f5f7fa;--panel:#ffffff;--panel2:#f8fafc;--panel3:#eef2f7;--line:#e2e7ef;--text:#1d2736;--muted:#697586;--cyan:#315ea8;--cyan2:#244d91;--lime:#21845b;--orange:#9d6b20;--red:#b94149;--purple:#7054ad;--radius:11px;--shadow:0 4px 16px #1e293b0a}
+html{scroll-behavior:smooth}body{background:var(--bg);color:var(--text)}
+.sidebar{background:#fff;border-right-color:#e3e7ee;box-shadow:none}.brand{padding-bottom:20px}.brand-mark{background:#eaf0fb;color:#315ea8;box-shadow:none;border-radius:10px}.brand-name{letter-spacing:.06em;color:#202b3a}.brand-sub{color:#778295}
+.course-chip{background:#f8fafc;border:1px solid #e4e9f0;border-radius:10px}.tiny-label,.eyebrow{color:#315ea8}.course-chip p,.section-label{color:#788396}.side-progress{background:#e8edf4}.side-progress span{background:#315ea8}
+.week-btn{color:#455367;border-radius:8px}.week-btn:hover{background:#f5f7fb;color:#1d2736}.week-btn.active{background:#edf2fb;border-color:#d5e0f2;color:#214579}.week-dot{border-color:#d8dee8;color:#647186;border-radius:6px}.week-btn.active .week-dot{background:#315ea8;border-color:#315ea8;color:#fff}
+.main{background:transparent}.breadcrumb{color:#808b9b}.breadcrumb strong{color:#344154}.topbar{margin-bottom:22px}.status-pill{background:#fff;border-color:#e2e7ef;color:#576477}.status-dot{background:#21845b;box-shadow:none}.icon-btn{background:#fff;color:#4e5b6e;border-color:#e2e7ef;border-radius:8px}
+.hero{margin-bottom:21px}.eyebrow{letter-spacing:.12em}.eyebrow:before{background:#315ea8}h1{font-size:clamp(25px,2.7vw,34px);font-weight:760;letter-spacing:-.035em;color:#182435}h1 .accent{color:#315ea8}.hero p{color:#697586}.btn{background:#fff;border-color:#dce2eb;color:#344154;border-radius:8px;box-shadow:none}.btn:hover{border-color:#aab9d1;transform:none}.btn.primary{background:#315ea8;border-color:#315ea8;color:#fff}.btn.primary:hover{background:#244d91}.btn.ghost{background:transparent}.btn.warn{color:#98631d}
+.stat-card{background:#fff;border:1px solid #e3e8f0;border-radius:11px;box-shadow:none;padding:15px 16px}.stat-card:after{display:none}.stat-label{color:#697586}.stat-icon{background:#edf2fb;color:#315ea8}.stat-value{color:#1d2736}.stat-note{color:#8791a0}.stat-note b{color:#21845b}.week-badge{background:#edf2fb;border:1px solid #dce5f4;color:#315ea8;border-radius:10px}.section-head h2{color:#1d2736}.section-head p{color:#697586}.week-status{color:#26724f;background:#f0f8f3;border-color:#d8ecdf;border-radius:7px}
+.toolbar{background:#fff;border:1px solid #e3e8f0;border-radius:10px}.filter-btn{color:#687487;border-radius:7px}.filter-btn.active{background:#edf2fb;border-color:#d5e0f2;color:#254c88}.search,.mode-select{background:#fff;border-color:#dce2eb;color:#243145;border-radius:7px}
+.question-panel,.right-panel{background:#fff;border:1px solid #e3e8f0;border-radius:11px;box-shadow:none}.question-top{background:#fff;border-bottom-color:#e8ecf2}.small-tag{color:#647187;background:#f5f7fa;border-color:#e5e9f0;border-radius:5px}.small-tag.source{color:#315ea8;background:#edf2fb;border-color:#d9e3f4}.small-tag.marked{color:#98631d;background:#fff7e8;border-color:#f0dfbc}.q-count{color:#7a8595}.q-progress{background:#edf0f5}.q-progress span{background:#315ea8}
+.question-body{background:#fff}.question-title{color:#1e2938;font-weight:680}.code-box{background:#f7f9fc;border-color:#e2e7ef;border-radius:8px}.code-box pre{color:#344154}.code-box .kw{color:#315ea8}.code-box .str{color:#26724f}.code-box .comment{color:#8791a0}
+.option{background:#fff;border-color:#e1e6ed;border-radius:8px;color:#344154;padding:11px 12px}.option:hover:not(:disabled){border-color:#b6c4d9;background:#f9fbfe}.option-letter{border-color:#e0e5ed;background:#f6f8fb;color:#687487;border-radius:6px}.option.selected{border-color:#9bb3dc;background:#f0f4fc}.option.selected .option-letter{border-color:#315ea8;background:#315ea8;color:#fff}.option.correct{border-color:#acd6bb;background:#f0f8f3}.option.correct .option-letter{color:#fff;background:#21845b;border-color:#21845b}.option.wrong{border-color:#e4b7bb;background:#fff5f5}.option.wrong .option-letter{background:#b94149;color:#fff}.feedback{border-radius:8px}.feedback.good{background:#f0f8f3;border-color:#d6eadf}.feedback.bad{background:#fff5f5;border-color:#f0d8da}.feedback-title{color:#275d43}.feedback.bad .feedback-title{color:#963840}
+.question-footer{background:#fff;border-top-color:#e9edf2}.text-btn,.review-btn{color:#697586}.review-btn{border-color:#e0e5ed;border-radius:7px}.review-btn.active{color:#98631d;background:#fff7e8;border-color:#f0dfbc}.next-btn{background:#315ea8;color:#fff;border-radius:7px}.next-btn:hover{background:#244d91}.right-panel{padding:18px}.right-title{color:#263346}.palette-btn{background:#f7f9fc;border-color:#e2e7ef;color:#718095;border-radius:6px}.palette-btn.current{background:#315ea8;border-color:#315ea8;color:#fff}.palette-btn.answered{background:#eef8f2;border-color:#cde7d7;color:#26724f}.palette-btn.incorrect{background:#fff2f2;border-color:#edc8cb;color:#a43840}.palette-btn.reviewed{box-shadow:inset 0 -3px #c48a31}.legend{color:#748094}.legend i{background:#eef8f2;border-color:#cde7d7}.legend .leg-current{background:#315ea8;border-color:#315ea8}.legend .leg-review{background:#fff7e8;border-color:#f0dfbc}.divider{background:#e9edf2}.week-progress-header{color:#677487}.week-progress-header strong{color:#1d2736}.mini-progress{background:#edf0f5}.mini-progress span{background:#315ea8}.right-note{color:#697586}.right-note b{color:#344154}.footer-note{color:#8791a0}.footer-note a{color:#315ea8}.toast{background:#1d2736;color:#fff;box-shadow:0 6px 24px #1e293b24}
+.empty-state{color:#667386}.empty-state strong{color:#1d2736}
+@media(max-width:820px){.sidebar{background:#fff}.week-btn.active{background:#edf2fb}}
+
+
+/* Focused dark theme: #10141F / #E4E4E4 / #003C9C */
+:root{--bg:#10141F;--panel:#151A26;--panel2:#1A2030;--panel3:#20283A;--line:#2B3344;--text:#E4E4E4;--muted:#9AA5B6;--cyan:#003C9C;--cyan2:#174FA8;--lime:#7FA9FF;--orange:#E7BA7D;--red:#FF858D;--purple:#B2A7FF;--radius:14px;--shadow:0 12px 32px #0003}
+html{scroll-behavior:smooth;scroll-padding-top:18px}body{background:#10141F;color:#E4E4E4;font-size:14px;line-height:1.55}.app{grid-template-columns:248px minmax(0,1fr)}.sidebar{background:#0D111A;border-right-color:#262D3B;padding:20px 13px 14px}.brand{padding:0 8px 20px}.brand-mark{background:#003C9C;color:#fff;border-radius:10px;box-shadow:none}.brand-name{letter-spacing:.06em}.brand-sub{letter-spacing:.08em}.course-chip{background:#151A26;border-color:#293345;border-radius:12px;padding:13px}.tiny-label,.eyebrow{color:#76A5FF}.eyebrow:before{background:#003C9C}.section-label{color:#7F8A9B}.week-nav{scrollbar-color:#3B465A transparent}.week-btn{padding:9px 9px;margin:2px 0;border-radius:9px;color:#C7CED9;gap:9px}.week-btn:hover{background:#171E2B;color:#fff}.week-btn.active{background:#17233A;border-color:#234A88;color:#F5F7FA}.week-dot{border-color:#3B465A;border-radius:6px}.week-btn.active .week-dot{background:#003C9C;border-color:#003C9C;color:#fff}.week-info strong{font-size:12px}.week-info span{color:#8994A6}.side-progress{background:#2A3140}.side-progress span{background:#2D67C5}.main{max-width:1480px;padding:24px clamp(18px,2.8vw,42px) 40px}.topbar{margin-bottom:22px;gap:14px;align-items:center}.breadcrumb{color:#8F9AAA;flex-wrap:wrap}.breadcrumb strong{color:#E4E4E4}.top-actions{gap:8px;flex-wrap:wrap;justify-content:flex-end}.status-pill{background:#151A26;border-color:#2B3344;color:#BEC6D2}.status-dot{background:#76A5FF;box-shadow:none}.btn{background:#171D2A;border-color:#30394A;color:#E4E4E4;border-radius:9px;padding:9px 12px;font-size:12px}.btn:hover{border-color:#4775BE;transform:translateY(-1px)}.btn.primary,.next-btn{background:#003C9C;border-color:#003C9C;color:#fff}.btn.primary:hover,.next-btn:hover{background:#124BAA}.btn.ghost{background:transparent}.icon-btn{background:#171D2A;color:#D7DDE7;border-color:#30394A;border-radius:8px}.hero{margin-bottom:21px}.eyebrow{letter-spacing:.12em}.hero p,.section-head p{color:#9AA5B6}.section-head{margin-bottom:12px;align-items:center}.week-title-wrap{gap:12px}.week-badge{width:42px;height:42px;background:#17233A;border-color:#2A4675;border-radius:10px;color:#8FB4FF}.section-head h2{font-size:19px}.week-status{color:#A7C5FF;background:#17233A;border-color:#263E66;padding:6px 9px}.toolbar{background:#151A26;border-color:#2B3344;border-radius:11px;padding:9px;margin-bottom:13px;gap:10px}.filter-btn{color:#A6AFBE;border-radius:7px;padding:8px 10px}.filter-btn.active{color:#fff;background:#003C9C;border-color:#003C9C}.toolbar-right{gap:8px}.search,.mode-select{background:#10141F;color:#E4E4E4;border-color:#343D4F;border-radius:8px;padding:9px 10px;font-size:12px}.search::placeholder{color:#778395}.practice-layout{grid-template-columns:minmax(0,1fr) 236px;gap:14px;align-items:start}.question-panel,.right-panel{background:#151A26;border-color:#2B3344;border-radius:12px;box-shadow:none}.question-panel{min-width:0}.question-top{padding:15px 18px 12px;border-bottom-color:#2A3140}.small-tag{background:#202737;color:#C2CAD5;border-color:#353E50;border-radius:5px}.small-tag.source{color:#9EC0FF;background:#17233A;border-color:#2D4D83}.small-tag.marked{color:#F0C98A;background:#2B2419;border-color:#685332}.q-count{color:#9AA5B6}.q-progress{background:#2A3140}.q-progress span{background:#2F66BC}.question-body{padding:20px 19px 18px}.question-title{font-size:16px;line-height:1.55;letter-spacing:-.01em;font-weight:700;margin-bottom:16px;color:#E4E4E4}.code-box{background:#0D111A;border-color:#30394A;border-radius:8px;padding:13px 14px;margin-bottom:17px}.code-box pre{color:#D2D9E4;font-size:12px}.code-box .kw{color:#8DB6FF}.code-box .str{color:#B7C8E9}.code-box .comment{color:#8793A6}.options{gap:8px}.option{background:#10141F;border-color:#30394A;border-radius:9px;padding:11px 12px;color:#D6DCE6;gap:10px}.option:hover:not(:disabled){background:#182136;border-color:#4266A1}.option-letter{background:#1A2030;border-color:#3B4558;color:#AFB9CA;border-radius:6px;flex-basis:26px;height:26px}.option.selected{border-color:#346AC0;background:#18243A}.option.selected .option-letter{background:#003C9C;border-color:#003C9C;color:#fff}.option.correct{border-color:#36755D;background:#14251F}.option.correct .option-letter{background:#237451;border-color:#237451;color:#fff}.option.wrong{border-color:#87474D;background:#2A1B22}.option.wrong .option-letter{background:#A33B48;border-color:#A33B48;color:#fff}.feedback{background:#171E2B;border-color:#343D4F;border-radius:9px;padding:12px 13px}.feedback.good{background:#14251F;border-color:#36755D}.feedback.bad{background:#2A1B22;border-color:#87474D}.feedback-title{color:#E4E4E4}.feedback.good .feedback-title{color:#8DD6B7}.feedback.bad .feedback-title{color:#FF9DA4}.feedback p{color:#C0C8D5}.question-footer{background:#121722;border-top-color:#2A3140;padding:13px 18px}.text-btn,.review-btn{color:#AFB9CA}.text-btn:hover{color:#fff}.review-btn{background:#151A26;border-color:#394356;border-radius:8px}.review-btn.active{color:#F0C98A;background:#2B2419;border-color:#685332}.next-btn{border-radius:8px;padding:9px 13px}.right-panel{padding:15px}.right-title{color:#E4E4E4;font-size:12px;margin-bottom:12px}.palette{grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}.palette-btn{background:#10141F;border-color:#30394A;color:#9DA8B9;border-radius:6px;aspect-ratio:1}.palette-btn:disabled{opacity:.33;cursor:not-allowed}.palette-btn.current{background:#003C9C;border-color:#2D67C5;color:#fff;box-shadow:none}.palette-btn.answered{background:#14251F;border-color:#36755D;color:#8DD6B7}.palette-btn.incorrect{background:#2A1B22;border-color:#87474D;color:#FF9DA4}.palette-btn.reviewed:after{color:#F0C98A}.legend{color:#9AA5B6;gap:8px}.legend i{background:#14251F;border-color:#36755D}.legend .leg-current{background:#003C9C;border-color:#2D67C5}.legend .leg-review{background:#2B2419;border-color:#685332}.divider{background:#2A3140}.week-progress-header strong{color:#E4E4E4}.week-progress-header span{color:#9AA5B6}.mini-progress{background:#2A3140}.mini-progress span{background:#2F66BC}.right-note{color:#929EAF;line-height:1.7}.right-note b{color:#D8DEE8}.empty-state{color:#9AA5B6}.empty-state strong{color:#E4E4E4}.footer-note{color:#8490A1;line-height:1.7}.footer-note strong,.creator-credit strong{color:#C6D7F4;font-weight:700}.creator-credit{font-size:10px;color:#778396;padding:12px 7px 0}.keyboard-note{border-top-color:#292F3C;color:#8B96A8}.key{background:#161C29;border-color:#343D4F;color:#C2CAD6}.toast{background:#E4E4E4;color:#10141F;box-shadow:0 8px 26px #0005}
+/* Practice: all matching questions stack in one scrollable page. Mock: one card at a time. */
+.question-stack{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;min-width:0}.practice-question{scroll-margin-top:18px;overflow:hidden}.practice-question .question-body{padding-top:17px}.practice-question .question-title{margin-bottom:14px}.practice-card-footer{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-top:14px;padding-top:12px;border-top:1px solid #2A3140}.answered-label{font-size:11px;color:#8894A6}.answered-label.is-correct{color:#8DD6B7}.answered-label.is-wrong{color:#FF9DA4}.practice-mode .right-panel{position:sticky;top:14px}.mock-mode .right-panel{position:sticky;top:14px}.mock-mode #questionPanel{max-width:100%}.practice-mode #questionPanel{background:transparent;border:0;box-shadow:none;overflow:visible}.practice-mode #questionPanel>.empty-state{background:#151A26;border:1px solid #2B3344;border-radius:12px}.creator-credit{border-top:1px solid #292F3C;margin-top:12px}
+@media(max-width:1100px){.app{grid-template-columns:220px minmax(0,1fr)}.practice-layout{grid-template-columns:minmax(0,1fr) 210px;gap:11px}.main{padding:21px 18px 34px}}
+@media(max-width:820px){.app{grid-template-columns:1fr}.sidebar{height:auto;position:relative;border-right:0;border-bottom:1px solid #262D3B;padding:12px 14px}.brand{padding:0 6px 12px}.course-chip{margin-bottom:10px}.section-label{padding:5px 8px}.week-nav{display:flex;gap:6px;padding:0 1px 5px;max-width:100%;overflow-x:auto}.week-btn{flex:0 0 150px;width:150px;margin:0}.side-bottom{display:none}.main{max-width:100%;padding:18px 14px 28px}.topbar{align-items:flex-start;flex-direction:column;margin-bottom:19px}.top-actions{width:100%;justify-content:flex-start}.practice-layout{grid-template-columns:minmax(0,1fr)}.right-panel{position:static!important;order:-1}.palette{grid-template-columns:repeat(10,minmax(0,1fr))}.legend{margin-bottom:10px}}
+@media(max-width:520px){.top-actions{gap:6px}.status-pill{display:none}.hero{display:block}.hero-right{justify-content:flex-start;margin-top:14px}.section-head{align-items:flex-start}.week-status{white-space:normal}.toolbar{align-items:stretch}.filters{width:100%}.filter-btn{flex:1;padding:8px 6px;font-size:10px}.toolbar-right{display:grid;grid-template-columns:1fr 145px;width:100%}.search{width:100%;min-width:0}.mode-select{width:100%;max-width:none}.question-body{padding:16px 13px}.question-top{padding:13px}.question-title{font-size:15px}.option{padding:10px;gap:8px}.option-text{font-size:12px}.question-footer{padding:12px}.palette{grid-template-columns:repeat(5,minmax(0,1fr))}.question-footer .footer-left .text-btn{display:inline-block}.practice-card-footer{align-items:flex-start}.answered-label{flex:1;min-width:100%}.footer-note{font-size:10px}}
+
+
+/* Final focused dark theme — palette selected by Hrithik Burnwal */
+:root{color-scheme:dark;--bg:#10141F;--panel:#171C28;--panel2:#1C2230;--panel3:#222B3A;--line:#30394A;--text:#E4E4E4;--muted:#A6AFBE;--cyan:#8DB5FF;--cyan2:#6C9AF0;--lime:#78D3A5;--orange:#E1B46E;--red:#F08A91;--purple:#B6A5FF;--accent:#003C9C;--radius:10px;--shadow:0 8px 26px #0004}
+html{color-scheme:dark}
+body{background:#10141F!important;color:#E4E4E4!important}
+.sidebar{background:#10141F!important;border-color:#2B3342!important;box-shadow:none!important}
+.course-chip,.stat-card,.toolbar,.question-panel,.right-panel,.dash-stat,.week-card{background:#151A25!important;border-color:#2B3342!important;box-shadow:none!important;color:#E4E4E4!important}
+.question-top,.question-body,.question-footer{background:#171C28!important;border-color:#2B3342!important}
+.dash-topbar{border-bottom-color:#30394A!important}
+.brand-name,.dash-brand,.breadcrumb strong,h1,.section-head h2,.dash-heading h1,.dash-section-head h2,.week-card h3,.dash-stat-value,.stat-value,.week-progress-header strong,.right-title,.question-title{color:#E4E4E4!important}
+.brand-sub,.course-chip p,.section-head p,.dash-heading p,.dash-section-head p,.week-card p,.stat-label,.stat-note,.dash-stat-label,.dash-stat-note,.q-count,.right-note,.footer-note,.section-label,.breadcrumb{color:#A6AFBE!important}
+.brand-mark{background:#003C9C!important;color:#fff!important;box-shadow:none!important}
+.tiny-label,.eyebrow,.dash-eyebrow{color:#8DB5FF!important}
+.eyebrow:before{background:#003C9C!important}
+.week-btn{color:#BFC8D6!important}
+.week-btn:hover{background:#1B2230!important;color:#E4E4E4!important}
+.week-btn.active{background:#17233A!important;border-color:#254B86!important;color:#E4E4E4!important}
+.week-dot{border-color:#394457!important;color:#A6AFBE!important}
+.week-btn.active .week-dot,.week-badge,.stat-icon,.dash-stat-icon,.week-number{background:#003C9C!important;border-color:#003C9C!important;color:#fff!important}
+.side-progress,.mini-progress,.overall-track,.q-progress{background:#283243!important}
+.side-progress span,.mini-progress span,.overall-track span,.q-progress span{background:#003C9C!important}
+.status-pill,.icon-btn,.btn:not(.primary),.search,.mode-select,.review-btn,.option,.palette-btn{background:#1B2230!important;border-color:#30394A!important;color:#E4E4E4!important}
+.btn.primary,.next-btn{background:#003C9C!important;border-color:#003C9C!important;color:#fff!important}
+.btn.primary:hover,.next-btn:hover{background:#0649B4!important;border-color:#0649B4!important}
+.btn.ghost{background:transparent!important}
+.btn.warn{color:#E1B46E!important}
+.filter-btn{color:#A6AFBE!important}
+.filter-btn.active{background:#1A2B47!important;border-color:#284A7F!important;color:#E4E4E4!important}
+.search::placeholder{color:#8995A8!important}
+.small-tag{background:#202838!important;border-color:#354054!important;color:#C0CADD!important}
+.small-tag.source{background:#192844!important;border-color:#294B80!important;color:#A9C7FF!important}
+.small-tag.marked{background:#302719!important;border-color:#675030!important;color:#E1B46E!important}
+.code-box{background:#0C1019!important;border-color:#30394A!important}
+.code-box pre{color:#D4DCE7!important}
+.code-box .kw{color:#8DB5FF!important}
+.code-box .str{color:#9DDEB7!important}
+.code-box .comment{color:#8995A8!important}
+.option:hover:not(:disabled){background:#202838!important;border-color:#52627B!important}
+.option.selected{background:#1A2B47!important;border-color:#3D66A9!important}
+.option.selected .option-letter{background:#003C9C!important;border-color:#4778CA!important;color:#fff!important}
+.option-letter{background:#141A26!important;border-color:#394457!important;color:#B9C4D4!important}
+.option.correct{background:#192D26!important;border-color:#35664D!important}
+.option.correct .option-letter{background:#28734F!important;border-color:#28734F!important;color:#fff!important}
+.option.wrong{background:#321F26!important;border-color:#75434C!important}
+.option.wrong .option-letter{background:#9E3B4A!important;border-color:#9E3B4A!important;color:#fff!important}
+.feedback{background:#1B2230!important;border-color:#30394A!important}
+.feedback.good{background:#192D26!important;border-color:#35664D!important}
+.feedback.bad{background:#321F26!important;border-color:#75434C!important}
+.feedback p{color:#CBD3DF!important}
+.feedback.good .feedback-title{color:#9DDEB7!important}
+.feedback.bad .feedback-title{color:#F08A91!important}
+.review-btn.active{background:#302719!important;border-color:#675030!important;color:#E1B46E!important}
+.palette-btn.current{background:#003C9C!important;border-color:#4778CA!important;color:#fff!important}
+.palette-btn.answered{background:#192D26!important;border-color:#35664D!important;color:#9DDEB7!important}
+.palette-btn.incorrect{background:#321F26!important;border-color:#75434C!important;color:#F08A91!important}
+.palette-btn.reviewed{box-shadow:inset 0 -3px #B78B43!important}
+.legend{color:#A6AFBE!important}
+.legend i{background:#192D26!important;border-color:#35664D!important}
+.legend .leg-current{background:#003C9C!important;border-color:#4778CA!important}
+.legend .leg-review{background:#302719!important;border-color:#675030!important}
+.divider{background:#30394A!important}
+.week-status{background:#192D26!important;border-color:#35664D!important;color:#9DDEB7!important}
+.week-pct{color:#C7D0DE!important}
+.week-card:hover{border-color:#465570!important}
+.empty-state,.empty-state strong{color:#E4E4E4!important}
+.toast{background:#003C9C!important;color:#fff!important;box-shadow:0 8px 26px #0005!important}
+a,.footer-note a{color:#8DB5FF!important}
+.dash-topbar .btn,.dash-nav .btn{background:#1B2230!important;color:#E4E4E4!important;border-color:#30394A!important}
+.dash-nav .btn.primary,.dash-topbar .btn.primary{background:#003C9C!important;color:#fff!important;border-color:#003C9C!important}
+@media(max-width:820px){.sidebar{background:#10141F!important}.week-btn.active{background:#17233A!important}}
+
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand"><div class="brand-mark">J//</div><div><div class="brand-name">JAVA LAB</div><div class="brand-sub">NPTEL EXAM PREP</div></div></div>
+    <div class="course-chip"><div class="tiny-label">Your course</div><h3>Programming in Java</h3><p>12-week MCQ practice track</p><div class="side-progress"><span id="sidebarProgress"></span></div></div>
+    <div class="section-label">Course outline</div>
+    <nav class="week-nav" id="weekNav" aria-label="Weeks"></nav>
+    <div class="side-bottom"><div class="keyboard-note">Keyboard shortcuts work in mock mode:<br><span class="key">1–4</span> choose answer · <span class="key">←</span> <span class="key">→</span> navigate</div><div class="creator-credit">Built by <strong>Hrithik Burnwal</strong></div></div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><div class="breadcrumb">COURSES <span>›</span> JAVA <span>›</span> <strong id="crumbWeek">WEEK 01</strong></div><div class="top-actions"><a class="btn ghost nav-home" href="index.html">Home</a><a class="btn ghost nav-dashboard" href="dashboard.html">Dashboard</a><div class="status-pill"><span class="status-dot"></span> Progress auto-saved</div><button class="icon-btn" id="resetWeekBtn" title="Reset this week's progress">↻ Reset week</button></div></header>
+    <section>
+      <div class="section-head"><div class="week-title-wrap"><div class="week-badge" id="weekBadge">01</div><div><h2 id="weekTitle">Week 1 · Overview of OOP & Java</h2><p id="weekSub">Foundations first. The rest gets easier from here.</p></div></div><div class="week-status" id="weekStatus">0% complete</div></div>
+      <div class="toolbar"><div class="filters" id="filters"><button class="filter-btn active" data-filter="all">All questions</button><button class="filter-btn" data-filter="unanswered">Unanswered</button><button class="filter-btn" data-filter="incorrect">Incorrect</button><button class="filter-btn" data-filter="review">Review list</button></div><div class="toolbar-right"><input type="search" class="search" id="searchInput" placeholder="Search in this week…" aria-label="Search questions"><select class="mode-select" id="modeSelect" aria-label="Practice mode"><option value="practice">Practice mode</option><option value="mock">Mock mode</option></select></div></div>
+      <div class="practice-layout">
+        <div class="question-panel" id="questionPanel"></div>
+        <aside class="right-panel"><h3 class="right-title">Question navigator <span id="paletteCount" style="font-size:10px;color:#8291a5;font-weight:600">01 / 10</span></h3><div class="palette" id="palette"></div><div class="legend"><span><i></i> Answered</span><span><i class="leg-current"></i> Current</span><span><i class="leg-review"></i> Review</span></div><div class="divider"></div><div class="week-progress-header"><div><div class="tiny-label">Week progress</div><strong id="weekProgressText">0%</strong></div><span id="weekProgressCount">0 of 10 done</span></div><div class="mini-progress"><span id="weekProgressBar"></span></div><p class="right-note"><b>How it works</b><br>Practice mode checks your answer instantly. Mock mode waits until you submit. Your progress is saved on this device, so you can pick up where you left off.</p><div class="divider"></div><button class="btn ghost" id="clearFilterBtn" style="width:100%">Show all questions</button></aside>
+      </div>
+    </section>
+    <div class="footer-note">Built by <strong>Hrithik Burnwal</strong> · Independent study tool · Not affiliated with NPTEL or SWAYAM. Some blurry code questions may be reconstructed.</div>
+  </main>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script>
+const weeks = [
+{title:"Overview of OOP & Java", subtitle:"Foundations first. The rest gets easier from here.", source:"Screenshot-based set", questions:[
+{q:"Consider the Java program. What is printed?",code:'class NPTEL {\n  public static void main(String[] args) {\n    System.out.println("Hello, World!");\n  }\n}',options:["Hello, World!","HelloWorld!","Compilation Error","Runtime Error"],a:0,exp:"System.out.println prints the string exactly as written, including the space and punctuation."},
+{q:"A Java file with the extension .class contains:",options:["Java source code","HTML tags","Java bytecode","A plain-text Java program"],a:2,exp:"The Java compiler (javac) compiles .java source files into .class files containing JVM bytecode."},
+{q:"Which of the following is NOT an object-oriented programming principle?",options:["Encapsulation","Inheritance","Polymorphism","Dynamic memory allocation"],a:3,exp:"Encapsulation, inheritance, and polymorphism are core OOP concepts. Dynamic memory allocation is a memory-management concept."},
+{q:"What is the correct sequence for executing a Java program?",options:["Run → Edit → Compile","Edit → Run → Compile","Compile → Edit → Run","Edit → Compile → Run"],a:3,exp:"Write or edit the source, compile it to bytecode, then run it on the JVM."},
+{q:"Which method signature is the standard entry point for a Java application?",options:["public void main(String[] args)","public static void main(String[] args)","static int main(String args)","private static main(String[] args)"],a:1,exp:"The conventional application entry point is public static void main(String[] args). The JVM calls this static method to start the application."},
+{q:"What is the role of the public static void main(String[] args) method?",options:["Initialization method","Execution entry point","Constructor","Destructor"],a:1,exp:"For a standard Java application, execution begins in main when the JVM launches the class."},
+{q:"Which option is NOT a standard feature of Java?",options:["Platform independence","Object-oriented programming","Direct support for explicit pointers","Support for polymorphism"],a:2,exp:"Java does not expose pointer arithmetic or explicit pointers to programmers. References are managed by the JVM."},
+{q:"What is the main purpose of the Java Virtual Machine (JVM)?",options:["Provide a graphical user interface","Execute bytecode across supported platforms","Debug every program automatically","Act as a game engine"],a:1,exp:"The JVM executes Java bytecode. Compiling to bytecode and providing platform-specific JVM implementations helps Java programs run on different systems."},
+{q:"What is the output of this code?",code:"int value = 10;\nvalue = value * 5;\nSystem.out.println(value);",options:["10","15","50","Compilation Error"],a:2,exp:"The value becomes 10 × 5, which is 50, and that value is printed."},
+{q:"Which statement best describes Java code execution?",options:["Java uses only an interpreter","Java uses only a compiler","Java uses both compilation and JVM execution","Java never compiles code"],a:2,exp:"Java source is compiled to bytecode. The JVM interprets bytecode and may JIT-compile frequently used code to native machine instructions."}
+]},
+{title:"Java Programming Elements",subtitle:"Syntax, types, methods, arrays, and the little details that break code.",source:"Screenshot-based set",questions:[
+{q:"Which is the correct declaration of the Java main method?",options:["public static void main(String[] args)","public void static main(String args)","public main(String[] args)","static public int main()"],a:0,exp:"Java permits public and static in either order, but the standard form is public static void main(String[] args)."},
+{q:"What is printed by this code?",code:"int x = 10;\ndouble y = 2.5;\nSystem.out.println(x + y);",options:["12","12.5","10.25","Compilation Error"],a:1,exp:"When an int and a double are added, the int is promoted to double. The sum is 12.5."},
+{q:"Which statement about Java variables is correct?",options:["Every local variable gets a default value","Local variables must be initialized before use","A variable's type can change after declaration","Variable names may contain spaces"],a:1,exp:"Local variables do not receive automatic default values. They must be definitely assigned before being read."},
+{q:"Which keyword refers to the immediate parent-class portion of an object?",options:["this","that","super","parent"],a:2,exp:"super can access superclass members and call a superclass constructor."},
+{q:"Which statement about constructors in Java is true?",options:["A constructor must return void","A constructor has the same name as its class","A constructor must be static","A constructor can only be private"],a:1,exp:"A constructor shares its class name and has no return type, not even void. It initializes newly created objects."},
+{q:"What is the output?",code:"class Counter {\n  static int count = 2;\n  public static void main(String[] args) {\n    count += 3;\n    System.out.println(count);\n  }\n}",options:["2","3","5","Compilation Error"],a:2,exp:"count starts at 2, then += 3 updates it to 5."},
+{q:"Which feature allows methods with the same name but different parameter lists?",options:["Method overloading","Method overriding","Encapsulation","Casting"],a:0,exp:"Overloading is resolved using the method name and parameter list, such as number, types, or order of parameters."},
+{q:"Which keyword refers to the current object?",options:["self","this","current","super"],a:1,exp:"this refers to the current instance and is commonly used to distinguish fields from parameters."},
+{q:"When is a default constructor supplied by the compiler?",options:["Always, even if a constructor is declared","Only when no constructor is declared in the class","Only when the class is abstract","Only for public classes"],a:1,exp:"If a class declares no constructors, Java provides a no-argument default constructor. Once you declare a constructor, that automatic one is not supplied."},
+{q:"Which is a valid way to create an integer array with five elements?",options:["int values(5);","int[5] values;","int[] values = new int[5];","array int values = 5;"],a:2,exp:"The new int[5] expression creates an array that can hold five int values. Array indexes run from 0 to 4."}
+]},
+{title:"Inheritance & Class Behaviour",subtitle:"Constructor order, super, overriding, abstract classes, and final members.",source:"Screenshot-based set",questions:[
+{q:"In an inheritance hierarchy, what is the constructor execution order when a subclass object is created?",options:["Subclass constructor, then superclass constructor","Only the superclass constructor","Only the subclass constructor","Superclass constructor, then subclass constructor"],a:3,exp:"A superclass constructor runs before the subclass constructor body, allowing the inherited part of the object to initialize first."},
+{q:"The super() call in a constructor is used to:",options:["Call the subclass constructor","Call a superclass constructor","Create a new interface","Call a static method only"],a:1,exp:"super() invokes a constructor of the direct superclass. When used explicitly, it must be the first statement in the constructor."},
+{q:"What is the output?",code:'class Vehicle {\n  void move() { System.out.println("The vehicle moves"); }\n}\nclass Car extends Vehicle {\n  @Override void move() { System.out.println("The car moves"); }\n}\npublic class Main {\n  public static void main(String[] args) {\n    Vehicle v = new Car();\n    v.move();\n  }\n}',options:["The vehicle moves","The car moves","The code does not compile","No output"],a:1,exp:"Overridden instance methods use runtime dispatch. The actual object is a Car, so Car.move() runs."},
+{q:"Which statement is NOT true about the final keyword?",options:["A final method cannot be overridden","A final variable can be assigned only once","A final class can be subclassed","A blank final field can be assigned in a constructor"],a:2,exp:"A final class cannot be extended. A final method cannot be overridden, and a blank final field may be assigned once in an initializer or constructor."},
+{q:"Which inheritance form is associated with the classic diamond problem?",options:["Single inheritance","Multilevel inheritance","Multiple inheritance of classes","Hierarchical inheritance"],a:2,exp:"Multiple inheritance of classes can create ambiguity when two parent classes provide the same inherited member. Java avoids this by disallowing multiple class inheritance."},
+{q:"Which access modifier most directly prevents subclasses from accessing a member by inheritance?",options:["public","protected","private","static"],a:2,exp:"A private member is not directly accessible in a subclass. The superclass may expose controlled access through methods."},
+{q:"Can a static method be overridden in Java in the same way as an instance method?",options:["Yes, static methods use runtime overriding","No, static methods are hidden rather than overridden","Only if the method is public","Only inside an abstract class"],a:1,exp:"Static methods belong to the class. A same-signature static method in a subclass hides the superclass method; dispatch is based on the reference's compile-time type."},
+{q:"What does this recursive method return for factorial(5)?",code:"static int factorial(int n) {\n  if (n <= 1) return 1;\n  return n * factorial(n - 1);\n}",options:["5","24","120","Runtime Error"],a:2,exp:"factorial(5) calculates 5 × 4 × 3 × 2 × 1 = 120."},
+{q:"Which statement about abstract classes is correct?",options:["An abstract class can never have fields","An abstract class must always contain at least one abstract method","A concrete subclass must implement inherited abstract methods","An abstract class can also be final"],a:2,exp:"A non-abstract subclass must implement all inherited abstract methods unless it remains abstract itself. Abstract classes can also contain fields and concrete methods."},
+{q:"What happens if code tries to reassign a final variable after it has been initialized?",code:"final int limit = 20;\nlimit = 42;",options:["The value changes to 42","The program prints both values","Compile-time error: final variable may not be assigned","The variable becomes static"],a:2,exp:"A final variable can be assigned only once. A second assignment causes a compile-time error."}
+]},
+{
+  "title": "Java Packages & Access Control",
+  "subtitle": "Encapsulation, polymorphism, packages, and Java access modifiers.",
+  "source": "Screenshot-based set",
+  "questions": [
+    {
+      "q": "Which object-oriented principle bundles data with methods and controls direct access to an object's state?",
+      "options": [
+        "Polymorphism",
+        "Abstraction",
+        "Encapsulation",
+        "Inheritance"
+      ],
+      "a": 2,
+      "exp": "Encapsulation groups state and behaviour and controls access to an object's internal data, commonly using private fields and public methods."
+    },
+    {
+      "q": "Consider the program below. What is printed?",
+      "code": "public class Main {\n  public static void main(String[] args) {\n    System.out.println(10 / 4);\n  }\n}",
+      "options": [
+        "2.5",
+        "2",
+        "2.0",
+        "Compilation error"
+      ],
+      "a": 1,
+      "exp": "Both operands are integers, so Java performs integer division and discards the fractional part. The result is 2."
+    },
+    {
+      "q": "Consider the following program. What is the output?",
+      "code": "class Base {\n  int value = 10;\n  void show() { System.out.println(\"Base: \" + value); }\n}\nclass Derived extends Base {\n  int value = 20;\n  @Override void show() { System.out.println(\"Derived: \" + value); }\n}\npublic class Main {\n  public static void main(String[] args) {\n    Base obj = new Derived();\n    obj.show();\n  }\n}",
+      "options": [
+        "Derived: 20",
+        "Base: 10",
+        "20",
+        "Compilation error"
+      ],
+      "a": 0,
+      "exp": "Instance-method overriding uses runtime dispatch. The object is a Derived, so Derived.show() executes and prints Derived: 20."
+    },
+    {
+      "q": "Which statement correctly distinguishes method overloading from method overriding?",
+      "options": [
+        "Overloading uses the same method name with different parameter lists",
+        "Overriding uses different method names",
+        "Overloading is possible only for fields",
+        "Overriding requires the methods to have different parameter lists"
+      ],
+      "a": 0,
+      "exp": "Overloaded methods share a name but differ in their parameter lists. Overriding replaces an inherited instance-method implementation with a compatible method in a subclass."
+    },
+    {
+      "q": "What can a Java package contain?",
+      "options": [
+        "Only classes",
+        "Only interfaces",
+        "Only annotations",
+        "Classes, interfaces, and subpackages"
+      ],
+      "a": 3,
+      "exp": "Packages group related types such as classes, interfaces, enums, and annotations. A package can also contain subpackages."
+    },
+    {
+      "q": "Consider the program. What is printed?",
+      "code": "class Display {\n  static void show(int x) { System.out.println(\"int\"); }\n  static void show(double x) { System.out.println(\"double\"); }\n  public static void main(String[] args) {\n    show(5);\n    show(5.0);\n  }\n}",
+      "options": [
+        "int, then double",
+        "double, then int",
+        "Compilation error",
+        "int, then int"
+      ],
+      "a": 0,
+      "exp": "The integer literal 5 selects show(int), while the floating-point literal 5.0 selects show(double)."
+    },
+    {
+      "q": "What is the output of this program?",
+      "code": "class Base {\n  void print() { System.out.println(\"Base class\"); }\n}\nclass Derived extends Base {\n  @Override void print() { System.out.println(\"Derived class\"); }\n}\npublic class Main {\n  public static void main(String[] args) {\n    Base obj = new Derived();\n    obj.print();\n  }\n}",
+      "options": [
+        "Base class",
+        "Derived class",
+        "Base class then Derived class",
+        "Compilation error"
+      ],
+      "a": 1,
+      "exp": "The runtime object is Derived, so its overridden print() method is called."
+    },
+    {
+      "q": "A protected method is declared in Parent. A subclass Child in another package calls the inherited method directly from within its own instance method. Which statement is true?",
+      "options": [
+        "The call is allowed under the subclass access rules",
+        "Protected members are never inherited",
+        "Only the declaring class can access it",
+        "The program must always fail to compile"
+      ],
+      "a": 0,
+      "exp": "A protected member is accessible within its package and to subclasses under Java's protected-access rules. Cross-package access is subject to those rules."
+    },
+    {
+      "q": "Which is the correct syntax for declaring a Java package?",
+      "options": [
+        "package mypackage;",
+        "package mypackage {}",
+        "import mypackage;",
+        "mypackage package;"
+      ],
+      "a": 0,
+      "exp": "A package declaration uses the package keyword and ends with a semicolon. It appears before imports and type declarations."
+    },
+    {
+      "q": "Which Java access modifier is the most restrictive?",
+      "options": [
+        "private",
+        "public",
+        "protected",
+        "default (package-private)"
+      ],
+      "a": 0,
+      "exp": "private restricts direct member access to within the declaring top-level class. Package-private, protected, and public grant broader access."
+    }
+  ]
+},
+{
+  "title": "Exception Handling & Program Tracing",
+  "subtitle": "Try/catch/finally, throw versus throws, and tracing Java execution.",
+  "source": "Screenshot-based set",
+  "questions": [
+    {
+      "q": "Which keyword is NOT normally used as part of Java exception handling?",
+      "options": [
+        "try",
+        "catch",
+        "final",
+        "finally"
+      ],
+      "a": 2,
+      "exp": "try, catch, and finally are used in exception-handling constructs. final is a separate modifier used with variables, methods, and classes."
+    },
+    {
+      "q": "What is the purpose of the throws keyword in Java?",
+      "options": [
+        "To declare exceptions that a method may pass to its caller",
+        "To throw an exception object immediately",
+        "To catch an exception",
+        "It is not a Java keyword"
+      ],
+      "a": 0,
+      "exp": "A method's throws clause declares exception types that the method may propagate to callers."
+    },
+    {
+      "q": "What is a finally block generally used for?",
+      "options": [
+        "Handling checked exceptions only",
+        "Defining a new exception type",
+        "Performing cleanup actions",
+        "Preventing exceptions from occurring"
+      ],
+      "a": 2,
+      "exp": "A finally block is commonly used for cleanup and usually runs whether the try block succeeds or an exception is handled."
+    },
+    {
+      "q": "What is printed by this program?",
+      "code": "public class Main {\n  public static void main(String[] args) {\n    try {\n      int value = 10 / 0;\n      System.out.println(value);\n    } catch (ArithmeticException e) {\n      System.out.println(\"ArithmeticException caught\");\n    }\n  }\n}",
+      "options": [
+        "0",
+        "ArithmeticException caught",
+        "Compilation error",
+        "No output"
+      ],
+      "a": 1,
+      "exp": "Integer division by zero throws ArithmeticException. The matching catch block handles it and prints the message."
+    },
+    {
+      "q": "What is the output of this program?",
+      "code": "class Calculator {\n  int calculate() { return 10; }\n}\nclass AdvancedCalculator extends Calculator {\n  @Override int calculate() { return 20; }\n}\npublic class Main {\n  public static void main(String[] args) {\n    Calculator c = new AdvancedCalculator();\n    System.out.println(c.calculate());\n  }\n}",
+      "options": [
+        "10",
+        "20",
+        "30",
+        "Compilation error"
+      ],
+      "a": 1,
+      "exp": "The method is overridden in AdvancedCalculator. Runtime dispatch calls the implementation belonging to the actual object, so 20 is printed."
+    },
+    {
+      "q": "What is printed by this try/catch/finally program?",
+      "code": "public class Main {\n  public static void main(String[] args) {\n    try {\n      int x = 10 / 0;\n      System.out.println(\"try\");\n    } catch (ArithmeticException e) {\n      System.out.println(\"catch\");\n    } finally {\n      System.out.println(\"finally\");\n    }\n  }\n}",
+      "options": [
+        "try only",
+        "catch only",
+        "catch, then finally",
+        "finally only"
+      ],
+      "a": 2,
+      "exp": "The division throws before the try's println runs. The catch block prints catch, and the finally block then prints finally."
+    },
+    {
+      "q": "What happens if a checked exception is neither caught nor declared with throws?",
+      "options": [
+        "It is silently ignored",
+        "The compiler reports an error",
+        "It becomes an unchecked exception",
+        "The JVM retries the statement"
+      ],
+      "a": 1,
+      "exp": "Java's checked-exception rules require the exception to be caught or declared. Otherwise the code fails compilation."
+    },
+    {
+      "q": "What is printed by this program?",
+      "code": "public class Main {\n  public static void main(String[] args) {\n    try {\n      String text = null;\n      System.out.println(text.length());\n    } catch (NullPointerException e) {\n      System.out.println(\"null reference\");\n    }\n  }\n}",
+      "options": [
+        "0",
+        "null",
+        "null reference",
+        "Compilation error"
+      ],
+      "a": 2,
+      "exp": "Calling length() on a null reference throws NullPointerException, which the catch block handles."
+    },
+    {
+      "q": "Which keyword explicitly throws a particular exception object?",
+      "options": [
+        "throws",
+        "throw",
+        "catch",
+        "finally"
+      ],
+      "a": 1,
+      "exp": "throw is followed by a Throwable object and raises that exception. throws appears in a method declaration."
+    },
+    {
+      "q": "What is printed by this program?",
+      "code": "public class Main {\n  public static void main(String[] args) {\n    try {\n      System.out.println(\"In try\");\n    } catch (Exception e) {\n      System.out.println(\"In catch\");\n    } finally {\n      System.out.println(\"In finally\");\n    }\n  }\n}",
+      "options": [
+        "In try only",
+        "In try, then catch",
+        "In try, then finally",
+        "Compilation error"
+      ],
+      "a": 2,
+      "exp": "The try block completes normally, so catch is skipped. The finally block still runs after the try block."
+    }
+  ]
+},
+{
+  "title": "Multithreading & Java Streams",
+  "subtitle": "Thread basics, Runnable, lifecycle states, scheduling, synchronization, and streams.",
+  "source": "Screenshot-based set",
+  "questions": [
+    {
+      "q": "What is the primary difference between byte streams and character streams in Java?",
+      "options": [
+        "Byte streams handle characters, while character streams handle bytes",
+        "Both types are used only for textual data",
+        "Character streams are always faster than byte streams",
+        "Byte streams are used for binary data, while character streams are used for text data"
+      ],
+      "a": 3,
+      "exp": "Byte streams work with 8-bit bytes and are suitable for binary data. Character streams process characters and handle text encoding and decoding."
+    },
+    {
+      "q": "Which statement best describes multithreading in Java?",
+      "options": [
+        "Multiple threads can execute concurrently while sharing the process memory space",
+        "Only one thread can execute at a time, ensuring strictly sequential execution",
+        "Threads in Java cannot communicate with each other",
+        "Each thread requires a separate process and separate memory space"
+      ],
+      "a": 0,
+      "exp": "Threads in one Java process share the heap and other process resources, while each thread has its own stack and execution state."
+    },
+    {
+      "q": "Consider this code. What happens when it runs?",
+      "code": "class ExampleThread extends Thread {\n  public void run() {\n    System.out.println(\"Thread is running.\");\n  }\n}\npublic class Main {\n  public static void main(String[] args) {\n    ExampleThread thread = new ExampleThread();\n    thread.start();\n    // thread.start();\n  }\n}",
+      "options": [
+        "It prints the message twice",
+        "It throws an error because start() is called a second time",
+        "The program always terminates with an exception",
+        "It prints \"Thread is running.\" once"
+      ],
+      "a": 3,
+      "exp": "Only one start() call is active; the second is commented out. The JVM starts the new thread and run() prints the message once."
+    },
+    {
+      "q": "Which method is used to start a new thread in Java?",
+      "options": [
+        "run()",
+        "start()",
+        "execute()",
+        "begin()"
+      ],
+      "a": 1,
+      "exp": "Thread.start() schedules a new thread of execution, which then invokes run(). Calling run() directly does not start a new thread."
+    },
+    {
+      "q": "What happens when this Runnable task is started?",
+      "code": "class RunnableExample implements Runnable {\n  public void run() {\n    for (int i = 0; i < 3; i++) {\n      System.out.println(\"Thread running \" + i);\n    }\n  }\n}\npublic class Main {\n  public static void main(String[] args) {\n    RunnableExample task = new RunnableExample();\n    Thread thread = new Thread(task);\n    thread.start();\n  }\n}",
+      "options": [
+        "Compilation fails because Runnable is not a Thread",
+        "The program runs and run() executes on a new thread",
+        "run() is called directly on the main thread",
+        "A runtime error occurs because Runnable is not implemented correctly"
+      ],
+      "a": 1,
+      "exp": "RunnableExample provides the task's run() method. Passing it to Thread and invoking start() runs that task on a new thread."
+    },
+    {
+      "q": "Which option lists valid Java thread states?",
+      "options": [
+        "NEW, RUNNABLE, RUNNING, DEAD",
+        "NEW, RUNNABLE, WAITING, BLOCKED",
+        "NEW, RUNNABLE, RUNNING, SLEEPING, DEAD",
+        "NEW, RUNNABLE, WAITING, BLOCKED, TERMINATED"
+      ],
+      "a": 3,
+      "exp": "NEW, RUNNABLE, WAITING, BLOCKED, and TERMINATED are valid Thread.State values. Java also defines TIMED_WAITING; RUNNING and DEAD are not the enum state names."
+    },
+    {
+      "q": "What does the thread scheduler commonly consider when choosing among runnable threads?",
+      "options": [
+        "Thread priority",
+        "Only the thread's execution time",
+        "Thread name",
+        "Thread creation order only"
+      ],
+      "a": 0,
+      "exp": "Thread priority can influence scheduling, although Java does not guarantee that a higher-priority thread always runs first."
+    },
+    {
+      "q": "Two threads are assigned MAX_PRIORITY and MIN_PRIORITY. Which statement about their execution order is true?",
+      "code": "Thread t1 = new Thread(task1);\nThread t2 = new Thread(task2);\nt1.setPriority(Thread.MAX_PRIORITY);\nt2.setPriority(Thread.MIN_PRIORITY);\nt1.start();\nt2.start();",
+      "options": [
+        "The higher-priority thread is guaranteed to execute first",
+        "The lower-priority thread will never execute",
+        "The order depends on JVM and operating-system scheduling policies",
+        "The program throws an error because these priority values are invalid"
+      ],
+      "a": 2,
+      "exp": "Priorities are scheduling hints, not strict execution-order guarantees. The JVM and operating system affect how runnable threads are scheduled."
+    },
+    {
+      "q": "What is the primary purpose of thread synchronization?",
+      "options": [
+        "To let multiple threads enter the same critical section simultaneously",
+        "To guarantee a fixed execution order for every thread",
+        "To make all threads execute one after another forever",
+        "To help prevent race conditions and keep shared data consistent"
+      ],
+      "a": 3,
+      "exp": "Synchronization coordinates access to shared mutable state, helping prevent race conditions and protect invariants."
+    },
+    {
+      "q": "Which method returns a reference to the currently executing thread object?",
+      "options": [
+        "public static boolean isInterrupted()",
+        "public static Thread currentThread()",
+        "public final boolean isAlive()",
+        "public final void suspend()"
+      ],
+      "a": 1,
+      "exp": "Thread.currentThread() returns a reference to the thread that is currently executing the code."
+    }
+  ]
+},
+{
+  "title": "Strings, I/O & Threads",
+  "subtitle": "Output tracing, input streams, files, and safe concurrent work.",
+  "source": "Screenshot + supplied answers",
+  "questions": [
+    {
+      "q": "What will be the output of the following Java program?",
+      "code": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, World!\");\n    }\n}",
+      "options": [
+        "Hello, World!",
+        "This is Programming in Java",
+        "Runtime Exception",
+        "null"
+      ],
+      "a": 0,
+      "exp": "println prints the string passed to it exactly. The original code in the screenshot is blurry, so this is a readable equivalent of the output-tracing question."
+    },
+    {
+      "q": "Complete the snippet with the method that reads one full line from a BufferedReader.",
+      "code": "BufferedReader br = new BufferedReader(new InputStreamReader(System.in));\nString line = br.____();",
+      "options": [
+        "read()",
+        "readLine()",
+        "nextLine()",
+        "getLine()"
+      ],
+      "a": 1,
+      "exp": "BufferedReader.readLine() reads a line of text and returns it as a String, or null at end of input."
+    },
+    {
+      "q": "What is the output of the following Java program?",
+      "code": "class Test {\n    public static void main(String[] args) {\n        int value = 10;\n        value += 10;\n        System.out.println(value);\n    }\n}",
+      "options": [
+        "10",
+        "20",
+        "Garbage value",
+        "Compilation error"
+      ],
+      "a": 1,
+      "exp": "The compound assignment value += 10 adds 10 to the original value, so 20 is printed. This is a clean equivalent for the blurry code-output question."
+    },
+    {
+      "q": "Which of the following is a valid declaration of the Java main method?",
+      "options": [
+        "public static void main(String[] args)",
+        "public void main(String[] args)",
+        "static int main(String args)",
+        "private main(String[] args)"
+      ],
+      "a": 0,
+      "exp": "The standard Java application entry point is public static void main(String[] args). The parameter name may vary, but its type and the method modifiers matter."
+    },
+    {
+      "q": "What will this program print?",
+      "code": "class Calculator {\n    int value;\n    Calculator() { value = 20; }\n    int add(int n) { return value + n; }\n    public static void main(String[] args) {\n        Calculator c = new Calculator();\n        System.out.println(c.add(10));\n    }\n}",
+      "options": [
+        "20",
+        "10",
+        "30",
+        "2"
+      ],
+      "a": 2,
+      "exp": "The constructor sets value to 20. add(10) returns 20 + 10, so the program prints 30. This replaces code that could not be transcribed reliably from the screenshot."
+    },
+    {
+      "q": "What is the primary difference between Byte Streams and Character Streams in Java?",
+      "options": [
+        "Byte streams handle character data only; character streams handle binary data",
+        "Byte streams handle binary data, while character streams handle text characters",
+        "Character streams are always faster than byte streams",
+        "Byte streams can only read files, while character streams can only write files"
+      ],
+      "a": 1,
+      "exp": "InputStream/OutputStream families operate on bytes. Reader/Writer families operate on characters and are suited to text."
+    },
+    {
+      "q": "What is the primary purpose of thread synchronization in Java?",
+      "options": [
+        "To allow multiple threads to execute the same method at exactly the same time",
+        "To increase the number of threads created",
+        "To prevent race conditions and help keep shared data consistent",
+        "To make all threads execute only on one processor"
+      ],
+      "a": 2,
+      "exp": "Synchronization coordinates access to shared mutable state so concurrent operations do not interfere unpredictably."
+    },
+    {
+      "q": "Which base stream class is intended for reading byte-oriented input?",
+      "options": [
+        "InputStream",
+        "OutputStream",
+        "DataOutputStream",
+        "PrintWriter"
+      ],
+      "a": 0,
+      "exp": "InputStream is the abstract base class for byte input. For character text, an InputStreamReader or BufferedReader may be more appropriate."
+    },
+    {
+      "q": "Which Java class can be used to create a new directory using its mkdir() or mkdirs() methods?",
+      "options": [
+        "File",
+        "FileWriter",
+        "Directory",
+        "FileReader"
+      ],
+      "a": 0,
+      "exp": "java.io.File provides mkdir() and mkdirs(). Modern Java code can also use Files.createDirectory or Files.createDirectories from java.nio.file."
+    },
+    {
+      "q": "What is the primary purpose of a thread in Java?",
+      "options": [
+        "To write data to a file",
+        "To read data from a file",
+        "To execute a task concurrently",
+        "To create directories"
+      ],
+      "a": 2,
+      "exp": "A thread is an independent path of execution, allowing work to run concurrently with other work."
+    }
+  ]
+},
+{
+  "title": "Swing & AWT Fundamentals",
+  "subtitle": "Practice the GUI components and layout basics that show up in MCQs.",
+  "source": "Screenshot + supplied answers",
+  "questions": [
+    {
+      "q": "Which statement about check boxes and radio buttons is TRUE?",
+      "options": [
+        "Check boxes allow only one selection, while radio buttons allow multiple selections",
+        "Check boxes allow multiple selections, while radio buttons usually allow one selection within a group",
+        "Both allow only one selection",
+        "Both always allow multiple selections"
+      ],
+      "a": 1,
+      "exp": "A check box is independently toggleable. Radio buttons are normally grouped so that one choice is selected at a time."
+    },
+    {
+      "q": "Which layout manager arranges components in a rectangular grid?",
+      "options": [
+        "FlowLayout",
+        "CardLayout",
+        "BorderLayout",
+        "GridLayout"
+      ],
+      "a": 3,
+      "exp": "GridLayout places components in a grid of rows and columns, giving the cells equal size."
+    },
+    {
+      "q": "Which method is used to set the title of a JFrame in Java?",
+      "options": [
+        "setTitle()",
+        "setName()",
+        "setText()",
+        "setLabel()"
+      ],
+      "a": 0,
+      "exp": "JFrame.setTitle(String) sets the text displayed in the window title bar."
+    },
+    {
+      "q": "Which method requests that a Swing component be repainted?",
+      "options": [
+        "paint()",
+        "repaint()",
+        "update()",
+        "draw()"
+      ],
+      "a": 1,
+      "exp": "repaint() schedules a repaint request. Custom Swing painting is generally implemented in paintComponent()."
+    },
+    {
+      "q": "Which AWT component is used to display a scrolling list of items?",
+      "options": [
+        "Label",
+        "List",
+        "Button",
+        "TextField"
+      ],
+      "a": 1,
+      "exp": "java.awt.List displays a scrollable list of text items and can support single or multiple selection."
+    },
+    {
+      "q": "Which layout manager arranges components in a flow, placing them one after another?",
+      "options": [
+        "FlowLayout",
+        "BorderLayout",
+        "GridLayout",
+        "CardLayout"
+      ],
+      "a": 0,
+      "exp": "FlowLayout lays components out from left to right and wraps to another line when needed."
+    },
+    {
+      "q": "What does AWT stand for in Java?",
+      "options": [
+        "Abstract Widget Toolkit",
+        "Advanced Window Toolkit",
+        "Abstract Window Toolkit",
+        "Advanced Widget Toolkit"
+      ],
+      "a": 2,
+      "exp": "AWT stands for Abstract Window Toolkit."
+    },
+    {
+      "q": "Which AWT component is used to create a button in a GUI?",
+      "options": [
+        "Label",
+        "Button",
+        "TextField",
+        "Checkbox"
+      ],
+      "a": 1,
+      "exp": "java.awt.Button represents a clickable AWT button."
+    },
+    {
+      "q": "Which description matches the shown GUI with First Name and Last Name fields?",
+      "options": [
+        "One frame, two labels, and one text field",
+        "One frame, two labels, and two text fields",
+        "Two frames, two labels, and two text fields",
+        "One frame, two buttons, and two text fields"
+      ],
+      "a": 1,
+      "exp": "The form contains a single window, a label for each field, and two text-entry fields."
+    },
+    {
+      "q": "Which statement about a check box in Java is TRUE?",
+      "options": [
+        "A check box cannot be in an on or off state",
+        "Clicking a check box changes its state between on and off",
+        "A check box can be on and off at the same time",
+        "A check box cannot be grouped with other check boxes"
+      ],
+      "a": 1,
+      "exp": "A check box is a toggle control that can be selected or deselected independently."
+    }
+  ]
+},
+{
+  "title": "Layout Managers & Event Handling",
+  "subtitle": "Choose layouts, build containers, and connect events to methods.",
+  "source": "Screenshot + supplied answers",
+  "questions": [
+    {
+      "q": "Two containers show components arranged in rows that can wrap to a new line. Which layout manager is most suitable?",
+      "options": [
+        "FlowLayout",
+        "BorderLayout",
+        "GridLayout",
+        "CardLayout"
+      ],
+      "a": 0,
+      "exp": "FlowLayout places components in a row and wraps them when horizontal space runs out."
+    },
+    {
+      "q": "What is the primary purpose of a layout manager in Java GUI programming?",
+      "options": [
+        "To encrypt GUI data",
+        "To arrange and size components inside a container",
+        "To handle database transactions",
+        "To translate Java bytecode"
+      ],
+      "a": 1,
+      "exp": "Layout managers determine how child components are positioned and sized within a GUI container."
+    },
+    {
+      "q": "Which JFrame call makes a configured window appear on screen?",
+      "code": "JFrame frame = new JFrame(\"Example\");\nframe.setSize(300, 200);\n// display the window",
+      "options": [
+        "frame.setVisible(true);",
+        "frame.start();",
+        "frame.display();",
+        "frame.openWindow();"
+      ],
+      "a": 0,
+      "exp": "A JFrame becomes visible after setVisible(true) is called."
+    },
+    {
+      "q": "Which call makes a JFrame terminate the application when its close button is clicked?",
+      "options": [
+        "frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);",
+        "frame.setVisible(false);",
+        "System.close();",
+        "frame.exit();"
+      ],
+      "a": 0,
+      "exp": "EXIT_ON_CLOSE tells the application to exit when the frame is closed. Other close policies are available for different behaviour."
+    },
+    {
+      "q": "Which method is used to add a component to a JFrame or another container?",
+      "options": [
+        "append()",
+        "add()",
+        "attachComponent()",
+        "insertWidget()"
+      ],
+      "a": 1,
+      "exp": "Containers provide add(...) methods to include child components."
+    },
+    {
+      "q": "Which method is used to set a container's layout manager?",
+      "options": [
+        "setLayout()",
+        "setManager()",
+        "layout()",
+        "arrange()"
+      ],
+      "a": 0,
+      "exp": "Call setLayout(new FlowLayout()) or another LayoutManager implementation on a container."
+    },
+    {
+      "q": "Which interface is commonly implemented to handle a button click in Swing?",
+      "options": [
+        "ActionListener",
+        "RunnableListener",
+        "WindowPainter",
+        "ButtonActionOnly"
+      ],
+      "a": 0,
+      "exp": "ActionListener receives action events, such as a JButton click."
+    },
+    {
+      "q": "Which method is invoked by an ActionListener when an action event occurs?",
+      "options": [
+        "mouseClicked()",
+        "actionPerformed()",
+        "valueChanged()",
+        "registerAction()"
+      ],
+      "a": 1,
+      "exp": "ActionListener defines actionPerformed(ActionEvent e)."
+    },
+    {
+      "q": "Which Swing component is best suited to displaying a drop-down list of selectable options?",
+      "options": [
+        "JFrame",
+        "JTextArea",
+        "JComboBox",
+        "JPanel"
+      ],
+      "a": 2,
+      "exp": "JComboBox provides a compact drop-down selection component."
+    },
+    {
+      "q": "Which statement best describes a Java GUI container?",
+      "options": [
+        "It can hold and organize other GUI components",
+        "It can only hold text and no components",
+        "It is used only to compile Java source",
+        "It must always contain a database connection"
+      ],
+      "a": 0,
+      "exp": "Containers such as JFrame and JPanel hold components and manage their layout."
+    }
+  ]
+},
+{
+  "title": "Swing, Networking & JDBC Basics",
+  "subtitle": "Mixed MCQs covering windows, database interfaces, and sockets.",
+  "source": "Screenshot + supplied answers",
+  "questions": [
+    {
+      "q": "Which Swing component is used to display a window?",
+      "options": [
+        "JFrame",
+        "JButton",
+        "JLabel",
+        "JTextField"
+      ],
+      "a": 0,
+      "exp": "JFrame is a top-level Swing window."
+    },
+    {
+      "q": "Which Swing component is used to enter a single line of text?",
+      "options": [
+        "JButton",
+        "JLabel",
+        "JTextField",
+        "JPanel"
+      ],
+      "a": 2,
+      "exp": "JTextField is a single-line text input component."
+    },
+    {
+      "q": "Which Swing component is commonly used to display non-editable text?",
+      "options": [
+        "JLabel",
+        "JButton",
+        "JFrame",
+        "JTextField"
+      ],
+      "a": 0,
+      "exp": "JLabel displays a short string or icon and is not an editable text field."
+    },
+    {
+      "q": "Which JDBC interface is used to execute SQL statements?",
+      "options": [
+        "ResultSet",
+        "Statement",
+        "Connection",
+        "DriverManager"
+      ],
+      "a": 1,
+      "exp": "Statement executes SQL. PreparedStatement and CallableStatement are related specialized interfaces."
+    },
+    {
+      "q": "Which JDBC object contains the result of a SELECT query?",
+      "options": [
+        "Connection",
+        "Statement",
+        "ResultSet",
+        "DriverManager"
+      ],
+      "a": 2,
+      "exp": "executeQuery() returns a ResultSet for a query that produces rows."
+    },
+    {
+      "q": "Which JDBC class is commonly used to establish a database connection?",
+      "options": [
+        "DriverManager",
+        "ResultSet",
+        "Statement",
+        "Scanner"
+      ],
+      "a": 0,
+      "exp": "DriverManager.getConnection(...) obtains a connection using a JDBC URL and credentials."
+    },
+    {
+      "q": "Which Java class is used to connect a client to a TCP server?",
+      "options": [
+        "ServerSocket",
+        "Socket",
+        "URL",
+        "NetworkInterface"
+      ],
+      "a": 1,
+      "exp": "Socket represents the client-side endpoint of a TCP connection."
+    },
+    {
+      "q": "Which class is used by a server to listen for incoming client connections?",
+      "options": [
+        "Socket",
+        "URL",
+        "ServerSocket",
+        "NetworkInterface"
+      ],
+      "a": 2,
+      "exp": "ServerSocket binds to a port and accepts incoming connections, typically returning a Socket for each client."
+    },
+    {
+      "q": "Which protocol is used in the URL https://nptel.ac.in?",
+      "options": [
+        "FTP",
+        "HTTP",
+        "HTTPS",
+        "SMTP"
+      ],
+      "a": 2,
+      "exp": "The URL scheme is https, indicating HTTP over TLS."
+    },
+    {
+      "q": "Which NetworkInterface method checks whether a network interface is up?",
+      "options": [
+        "isActive()",
+        "isUp()",
+        "isRunning()",
+        "isConnected()"
+      ],
+      "a": 1,
+      "exp": "NetworkInterface.isUp() reports whether the network interface is up and running."
+    }
+  ]
+},
+{
+  "title": "JDBC Connections & Transactions",
+  "subtitle": "Connection setup, statements, result sets, commits, and cleanup.",
+  "source": "Screenshot + supplied answers",
+  "questions": [
+    {
+      "q": "How do you establish a connection to a database using JDBC?",
+      "options": [
+        "By creating an instance of the Connection interface directly",
+        "By using DriverManager.getConnection()",
+        "By implementing the Connection interface",
+        "By extending the Connection class"
+      ],
+      "a": 1,
+      "exp": "DriverManager.getConnection(...) asks a registered JDBC driver to establish the connection."
+    },
+    {
+      "q": "Which method executes a simple SQL query and returns a ResultSet?",
+      "options": [
+        "executeQuery()",
+        "executeUpdate()",
+        "execute() only",
+        "run()"
+      ],
+      "a": 0,
+      "exp": "executeQuery() is intended for SQL queries that return a ResultSet, typically SELECT statements."
+    },
+    {
+      "q": "Which class provides the standard entry point for obtaining JDBC connections?",
+      "options": [
+        "java.sql.Manager",
+        "java.sql.DriverManager",
+        "java.sql.Statement",
+        "java.sql.DriverSession"
+      ],
+      "a": 1,
+      "exp": "java.sql.DriverManager manages JDBC drivers and provides getConnection methods."
+    },
+    {
+      "q": "What is the purpose of the ResultSet interface in JDBC?",
+      "options": [
+        "To store and access the results of a query",
+        "To execute SQL queries",
+        "To manage database connections",
+        "To update any database without a statement"
+      ],
+      "a": 0,
+      "exp": "ResultSet exposes the rows and columns returned by a query and lets code traverse the result."
+    },
+    {
+      "q": "What does connection.setAutoCommit(false) do?",
+      "options": [
+        "Commits every query immediately",
+        "Explicitly enables auto-commit",
+        "Disables automatic commits so a transaction can be managed manually",
+        "Prevents all transactions from being committed"
+      ],
+      "a": 2,
+      "exp": "With auto-commit disabled, the application explicitly commits or rolls back the transaction."
+    },
+    {
+      "q": "Given the connection URL below, which statement is FALSE?",
+      "code": "DriverManager.getConnection(\n  \"jdbc:mysql://localhost:3306/mydb\",\n  \"user\", \"password\");",
+      "options": [
+        "3306 is the default MySQL port",
+        "The database name in the URL is mydb",
+        "The host in the URL is localhost",
+        "The URL explicitly connects to the remote host 192.168.1.10"
+      ],
+      "a": 3,
+      "exp": "The URL names localhost as its host, not 192.168.1.10. Port 3306 is MySQL's conventional default port, and the database path is mydb."
+    },
+    {
+      "q": "What is the recommended order for closing JDBC resources?",
+      "options": [
+        "Connection, then Statement, then ResultSet",
+        "ResultSet, then Statement, then Connection",
+        "Statement, then Connection, then ResultSet",
+        "Statement, then ResultSet, then Connection"
+      ],
+      "a": 1,
+      "exp": "Close resources in reverse order of acquisition: result set, statement, then connection. try-with-resources can automate this safely."
+    },
+    {
+      "q": "What is the full form of JDBC?",
+      "options": [
+        "Java Database Connectivity",
+        "Java Data Code",
+        "Java Data Communication",
+        "Java Development Connectivity"
+      ],
+      "a": 0,
+      "exp": "JDBC stands for Java Database Connectivity."
+    },
+    {
+      "q": "Which statement correctly obtains a MySQL JDBC connection?",
+      "options": [
+        "DriverManager.connect(\"mysql:localhost/mydb\", \"user\", \"password\")",
+        "DriverManager.getConnection(\"jdbc:mysql://localhost:3306/mydb\", \"user\", \"password\")",
+        "Connection.get(\"jdbc://localhost:3306/mydb\", \"user\", \"password\")",
+        "Driver.connect(\"jdbc:mysql://localhost/mydb\", \"user\", \"password\")"
+      ],
+      "a": 1,
+      "exp": "DriverManager.getConnection accepts a JDBC URL and optional credentials. Replace the example database name and credentials with real configured values."
+    },
+    {
+      "q": "What is the purpose of the DriverManager class in JDBC?",
+      "options": [
+        "To manage JDBC drivers and help obtain database connections",
+        "To execute every SQL query directly",
+        "To fetch rows from a ResultSet",
+        "To represent a database record"
+      ],
+      "a": 0,
+      "exp": "DriverManager locates an appropriate registered JDBC driver and exposes getConnection methods."
+    }
+  ]
+},
+{
+  "title": "Core Java Mixed Revision",
+  "subtitle": "Quick checks on strings, exceptions, arrays, layout, and networking.",
+  "source": "Screenshot + supplied answers",
+  "questions": [
+    {
+      "q": "Which method returns the number of characters in a Java String?",
+      "options": [
+        "size()",
+        "length()",
+        "count()",
+        "getSize()"
+      ],
+      "a": 1,
+      "exp": "String.length() returns the number of UTF-16 code units in the string."
+    },
+    {
+      "q": "Which method gets the character at a specified index in a String?",
+      "options": [
+        "charAt()",
+        "getChar()",
+        "character()",
+        "getAt()"
+      ],
+      "a": 0,
+      "exp": "str.charAt(index) returns the char at that zero-based index."
+    },
+    {
+      "q": "Which keyword is used to create a subclass in Java?",
+      "options": [
+        "implements",
+        "inherits",
+        "extends",
+        "super"
+      ],
+      "a": 2,
+      "exp": "A class extends another class to inherit from it. A class uses implements to implement an interface."
+    },
+    {
+      "q": "Which block executes whether an exception occurs or not, with usual control flow?",
+      "options": [
+        "try",
+        "catch",
+        "throw",
+        "finally"
+      ],
+      "a": 3,
+      "exp": "A finally block is used for cleanup and normally runs whether or not an exception occurs. Process termination can prevent it from running."
+    },
+    {
+      "q": "Which keyword is used to explicitly throw an exception in Java?",
+      "options": [
+        "throws",
+        "throw",
+        "exception",
+        "catch"
+      ],
+      "a": 1,
+      "exp": "throw is followed by an exception object. throws appears in a method declaration to list possible exceptions."
+    },
+    {
+      "q": "Which keyword declares that a method may pass an exception to its caller?",
+      "options": [
+        "throw",
+        "throws",
+        "try",
+        "finally"
+      ],
+      "a": 1,
+      "exp": "The throws clause appears in the method signature and declares checked exceptions that may be propagated."
+    },
+    {
+      "q": "Which is a valid Java array declaration?",
+      "options": [
+        "array int arr;",
+        "newarray arr;",
+        "int[] arr;",
+        "arr[] int;"
+      ],
+      "a": 2,
+      "exp": "In Java, int[] arr; declares a variable that can reference an integer array. An array object can then be created with new int[size]."
+    },
+    {
+      "q": "Which layout manager arranges components in five regions?",
+      "options": [
+        "FlowLayout",
+        "BorderLayout",
+        "GridLayout",
+        "BoxLayout"
+      ],
+      "a": 1,
+      "exp": "BorderLayout has NORTH, SOUTH, EAST, WEST, and CENTER regions."
+    },
+    {
+      "q": "Which method registers an ActionListener with a JButton?",
+      "options": [
+        "addActionListener()",
+        "addButtonListener()",
+        "setAction()",
+        "registerAction()"
+      ],
+      "a": 0,
+      "exp": "button.addActionListener(listener) registers a listener for action events."
+    },
+    {
+      "q": "Which NetworkInterface method checks whether a network interface is up?",
+      "options": [
+        "isActive()",
+        "isUp()",
+        "isRunning()",
+        "isConnected()"
+      ],
+      "a": 1,
+      "exp": "NetworkInterface.isUp() checks whether the interface is up and running."
+    }
+  ]
+}
+];
+
+const $ = id => document.getElementById(id);
+const STORAGE_KEY = 'java-nptel-mcq-lab-v3';
+const requestedWeek = Number(new URLSearchParams(location.search).get('week') || 1);
+let selectedWeek = Number.isInteger(requestedWeek) && requestedWeek >= 1 && requestedWeek <= 12 ? requestedWeek - 1 : 0, currentFilteredPos = 0, filterMode = 'all', searchTerm = '', mode = 'practice';
+let store = {records:{}};
+try {
+  const parsed = JSON.parse(localStorage.getItem(STORAGE_KEY)||'null');
+  if(parsed && parsed.records) {
+    store = parsed;
+  } else {
+    // The Week 7–12 bank has been replaced. Preserve only Week 1–6 records so old answers cannot mark new questions as completed.
+    let previous = JSON.parse(localStorage.getItem('java-nptel-mcq-lab-v2')||'null');
+    if(!previous || !previous.records) previous = JSON.parse(localStorage.getItem('java-nptel-mcq-lab-v1')||'null');
+    if(previous && previous.records) {
+      const preserved = {};
+      Object.entries(previous.records).forEach(([k, record]) => {
+        const weekIndex = Number(k.split('-')[0]);
+        if(weekIndex < 6) preserved[k] = record;
+      });
+      store = {records:preserved};
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(store));
+    }
+  }
+} catch(e) { }
+function key(w,i){return `${w}-${i}`}
+function getRecord(w,i){return store.records[key(w,i)] || {selected:null,graded:false,correct:null,review:false}}
+function save(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(store))}catch(e){} updateStats()}
+function toast(message){const el=$('toast');el.textContent=message;el.classList.add('show');clearTimeout(toast.t);toast.t=setTimeout(()=>el.classList.remove('show'),1900)}
+function totalQuestions(){return weeks.reduce((n,w)=>n+w.questions.length,0)}
+function allRecords(){return Object.keys(store.records).map(k=>store.records[k]).filter(r=>r.graded)}
+function globalStats(){const records=allRecords();return {answered:records.length,correct:records.filter(r=>r.correct).length,accuracy:records.length?Math.round(records.filter(r=>r.correct).length/records.length*100):null}}
+function weekStats(w){let answered=0,correct=0,review=0;weeks[w].questions.forEach((_,i)=>{const r=getRecord(w,i);if(r.graded){answered++;if(r.correct)correct++}if(r.review)review++});return {answered,correct,review,accuracy:answered?Math.round(correct/answered*100):null}}
+function getFilteredIndexes(){const arr=[];weeks[selectedWeek].questions.forEach((q,i)=>{const r=getRecord(selectedWeek,i);const hay=(q.q+' '+(q.options||[]).join(' ')).toLowerCase();if(searchTerm && !hay.includes(searchTerm.toLowerCase()))return;if(filterMode==='unanswered'&&r.graded)return;if(filterMode==='incorrect'&&(!r.graded||r.correct))return;if(filterMode==='review'&&!r.review)return;arr.push(i)});return arr}
+function currentIndex(){const arr=getFilteredIndexes();return arr.length?arr[Math.max(0,Math.min(currentFilteredPos,arr.length-1))]:null}
+function renderWeeks(){const nav=$('weekNav');nav.innerHTML='';weeks.forEach((w,i)=>{const s=weekStats(i),button=document.createElement('button');button.className='week-btn'+(i===selectedWeek?' active':'');button.innerHTML=`<span class="week-dot">${String(i+1).padStart(2,'0')}</span><span class="week-info"><strong>Week ${i+1}</strong><span>${w.title}</span></span><span class="week-count">${s.answered}/${w.questions.length}</span>`;button.addEventListener('click',()=>{selectedWeek=i;currentFilteredPos=0;searchTerm='';$('searchInput').value='';filterMode='all';syncFilters();renderAll()});nav.appendChild(button)})}
+function syncFilters(){$$('filter-btn').forEach(b=>b.classList.toggle('active',b.dataset.filter===filterMode))}
+function $$(cls){return Array.from(document.querySelectorAll('.'+cls))}
+function updateStats(){const gs=globalStats(),ws=weekStats(selectedWeek);$('sidebarProgress').style.width=(gs.answered/totalQuestions()*100)+'%';$('weekStatus').textContent=Math.round(ws.answered/weeks[selectedWeek].questions.length*100)+'% complete';$('weekProgressText').textContent=Math.round(ws.answered/weeks[selectedWeek].questions.length*100)+'%';$('weekProgressCount').textContent=`${ws.answered} of ${weeks[selectedWeek].questions.length} done`;$('weekProgressBar').style.width=(ws.answered/weeks[selectedWeek].questions.length*100)+'%';renderWeeks()}
+function renderMockQuestion(){const panel=$('questionPanel'),indexes=getFilteredIndexes();const index=currentIndex();if(index===null){panel.innerHTML=`<div class="empty-state"><div style="font-size:28px">⌕</div><strong>No matching questions</strong><p>There are no questions for this filter or search. Reset the filter to continue.</p><button class="btn primary" id="emptyReset">Show all questions</button></div>`;$('emptyReset').onclick=()=>{filterMode='all';searchTerm='';$('searchInput').value='';syncFilters();currentFilteredPos=0;renderAll()};renderPalette();return}
+const q=weeks[selectedWeek].questions[index],r=getRecord(selectedWeek,index),isGraded=r.graded,letters=['A','B','C','D'];let html=`<div class="question-top"><div class="q-meta"><span class="small-tag">MCQ · 1 point</span>${r.review?'<span class="small-tag marked">★ REVIEW</span>':''}</div><span class="q-count">Question ${String(index+1).padStart(2,'0')} <span style="color:#4d5c70">/ ${weeks[selectedWeek].questions.length}</span></span></div><div class="q-progress"><span style="width:${(wsCount(selectedWeek)/weeks[selectedWeek].questions.length)*100}%"></span></div><div class="question-body"><h3 class="question-title">${esc(q.q)}</h3>${q.code?`<div class="code-box"><pre>${esc(q.code)}</pre></div>`:''}<div class="options">${q.options.map((op,j)=>{let cls='option';if(r.selected===j)cls+=' selected';if(isGraded&&j===q.a)cls+=' correct';if(isGraded&&r.selected===j&&j!==q.a)cls+=' wrong';let disabled=mode==='practice'&&isGraded?'disabled':'';return `<button class="${cls}" data-option="${j}" ${disabled}><span class="option-letter">${letters[j]}</span><span class="option-text">${esc(op)}</span><span class="option-check">${isGraded&&j===q.a?'✓':isGraded&&r.selected===j?'×':''}</span></button>`}).join('')}</div><div class="feedback ${isGraded?'show '+(r.correct?'good':'bad'):''}" id="feedback">${isGraded?`<div class="feedback-title">${r.correct?'Correct. Keep that momentum.':'Not quite. Learn it, then move on.'}</div><p>${esc(q.exp)}${r.correct?'':' The correct answer is '+letters[q.a]+': '+esc(q.options[q.a])+'.'}</p>`:''}</div>${mode==='mock'&&!isGraded?'<div style="margin-top:14px;display:flex;justify-content:flex-end"><button class="btn primary" id="submitAnswer">Check answer</button></div>':''}</div><div class="question-footer"><div class="footer-left"><button class="text-btn" id="prevBtn">← Previous</button><button class="review-btn ${r.review?'active':''}" id="reviewToggle">${r.review?'★ In review list':'☆ Mark for review'}</button></div><div class="footer-right"><button class="text-btn" id="skipBtn">Skip</button><button class="next-btn" id="nextBtn">${currentFilteredPos===indexes.length-1?'Finish week':'Next question'} →</button></div></div>`;
+panel.innerHTML=html;panel.querySelectorAll('[data-option]').forEach(btn=>btn.addEventListener('click',()=>chooseAnswer(index,Number(btn.dataset.option))));$('reviewToggle').onclick=()=>{const rec={...getRecord(selectedWeek,index),review:!getRecord(selectedWeek,index).review};store.records[key(selectedWeek,index)]=rec;save();renderQuestion();renderPalette();toast(rec.review?'Added to review list':'Removed from review list')};$('prevBtn').onclick=()=>move(-1);$('skipBtn').onclick=()=>move(1);$('nextBtn').onclick=()=>{if(currentFilteredPos===indexes.length-1){if(weekStats(selectedWeek).answered===weeks[selectedWeek].questions.length)toast('Week complete. Look at you, making progress.');else toast('End of this filtered set');currentFilteredPos=0}else move(1)};if($('submitAnswer'))$('submitAnswer').onclick=()=>gradeAnswer(index);renderPalette();$('paletteCount').textContent=`${String(index+1).padStart(2,'0')} / ${weeks[selectedWeek].questions.length}`}
+function renderPracticeQuestions(){
+  const panel=$('questionPanel'),indexes=getFilteredIndexes();
+  panel.className='question-stack';
+  panel.removeAttribute('data-question-index');
+  if(!indexes.length){
+    panel.innerHTML=`<div class="empty-state"><div style="font-size:28px">⌕</div><strong>No matching questions</strong><p>No questions match this filter or search. Reset the filter to continue.</p><button class="btn primary" id="emptyReset">Show all questions</button></div>`;
+    $('emptyReset').onclick=()=>{filterMode='all';searchTerm='';$('searchInput').value='';currentFilteredPos=0;syncFilters();renderAll()};
+    renderPalette();$('paletteCount').textContent='0 visible';return;
+  }
+  const letters=['A','B','C','D'];
+  
+  panel.innerHTML=indexes.map((index,pos)=>{
+    const q=weeks[selectedWeek].questions[index],r=getRecord(selectedWeek,index),isGraded=r.graded;
+    return `<article class="question-panel practice-question" data-question-card="${index}">
+      <div class="question-top"><div class="q-meta"><span class="small-tag">QUESTION ${String(index+1).padStart(2,'0')}</span>${r.review?'<span class="small-tag marked">★ REVIEW</span>':''}</div><span class="q-count">${pos+1} of ${indexes.length}</span></div>
+      <div class="q-progress"><span style="width:${(wsCount(selectedWeek)/weeks[selectedWeek].questions.length)*100}%"></span></div>
+      <div class="question-body"><h3 class="question-title">${esc(q.q)}</h3>${q.code?`<div class="code-box"><pre>${esc(q.code)}</pre></div>`:''}
+      <div class="options">${q.options.map((op,j)=>{let cls='option';if(r.selected===j)cls+=' selected';if(isGraded&&j===q.a)cls+=' correct';if(isGraded&&r.selected===j&&j!==q.a)cls+=' wrong';return `<button class="${cls}" data-practice-option="${index}" data-option="${j}" ${isGraded?'disabled':''}><span class="option-letter">${letters[j]}</span><span class="option-text">${esc(op)}</span><span class="option-check">${isGraded&&j===q.a?'✓':isGraded&&r.selected===j?'×':''}</span></button>`}).join('')}</div>
+      <div class="feedback ${isGraded?'show '+(r.correct?'good':'bad'):''}">${isGraded?`<div class="feedback-title">${r.correct?'Correct answer':'Review this one'}</div><p>${esc(q.exp)}${r.correct?'':' The correct answer is '+letters[q.a]+': '+esc(q.options[q.a])+'.'}</p>`:''}</div>
+      <div class="practice-card-footer"><span class="answered-label ${isGraded?(r.correct?'is-correct':'is-wrong'):''}">${isGraded?(r.correct?'Answered correctly':'Answer checked'):'Choose an answer to check instantly'}</span><button class="review-btn practice-review-toggle ${r.review?'active':''}" data-review-question="${index}">${r.review?'★ In review list':'☆ Mark for review'}</button></div>
+      </div></article>`;
+  }).join('');
+  panel.querySelectorAll('[data-practice-option]').forEach(btn=>btn.addEventListener('click',()=>chooseAnswer(Number(btn.dataset.practiceOption),Number(btn.dataset.option))));
+  panel.querySelectorAll('[data-review-question]').forEach(btn=>btn.addEventListener('click',()=>{
+    const index=Number(btn.dataset.reviewQuestion),rec={...getRecord(selectedWeek,index),review:!getRecord(selectedWeek,index).review};
+    store.records[key(selectedWeek,index)]=rec;save();const y=window.scrollY;renderPracticeQuestions();renderPalette();window.scrollTo(0,y);toast(rec.review?'Added to review list':'Removed from review list');
+  }));
+  renderPalette();$('paletteCount').textContent=`${indexes.length} visible`;
+}
+function renderQuestion(){
+  const layout=document.querySelector('.practice-layout');
+  layout.classList.toggle('practice-mode',mode==='practice');
+  layout.classList.toggle('mock-mode',mode==='mock');
+  if(mode==='practice')return renderPracticeQuestions();
+  const panel=$('questionPanel');panel.className='question-panel';
+  return renderMockQuestion();
+}
+
+function wsCount(w){return weekStats(w).answered}
+function chooseAnswer(index,choice){const old=getRecord(selectedWeek,index);if(mode==='practice'&&old.graded)return;const y=window.scrollY;store.records[key(selectedWeek,index)]={...old,selected:choice,graded:mode==='practice',correct:mode==='practice'?choice===weeks[selectedWeek].questions[index].a:old.correct};save();if(mode==='practice')toast(choice===weeks[selectedWeek].questions[index].a?'Correct answer':'Not quite. Check the explanation');renderQuestion();renderPalette();if(mode==='practice')window.scrollTo(0,y)}
+function gradeAnswer(index){const r=getRecord(selectedWeek,index),q=weeks[selectedWeek].questions[index];if(r.selected===null||r.selected===undefined){toast('Choose an answer first');return}store.records[key(selectedWeek,index)]={...r,graded:true,correct:r.selected===q.a};save();renderQuestion();renderPalette();toast(r.selected===q.a?'Correct answer':'Answer checked')}
+function move(dir){const ix=getFilteredIndexes();if(!ix.length)return;currentFilteredPos=Math.max(0,Math.min(ix.length-1,currentFilteredPos+dir));renderQuestion()}
+function renderPalette(){const p=$('palette');p.innerHTML='';weeks[selectedWeek].questions.forEach((q,i)=>{const r=getRecord(selectedWeek,i),b=document.createElement('button');const ix=getFilteredIndexes().indexOf(i);b.className='palette-btn'+(mode==='mock'&&i===currentIndex()?' current':'')+(r.graded?(r.correct?' answered':' incorrect'):'')+(r.review?' reviewed':'');b.textContent=String(i+1);b.title=`Question ${i+1}${r.graded?(r.correct?' · Correct':' · Incorrect'):''}${r.review?' · Marked for review':''}`;b.disabled=ix===-1;b.onclick=()=>{if(ix!==-1){if(mode==='practice'){const card=document.querySelector(`[data-question-card="${i}"]`);if(card)card.scrollIntoView({behavior:'smooth',block:'start'})}else{currentFilteredPos=ix;renderQuestion()}}};p.appendChild(b)})}
+function renderAll(){const w=weeks[selectedWeek];$('crumbWeek').textContent='WEEK '+String(selectedWeek+1).padStart(2,'0');$('weekBadge').textContent=String(selectedWeek+1).padStart(2,'0');$('weekTitle').textContent=`Week ${selectedWeek+1} · ${w.title}`;$('weekSub').textContent=w.subtitle;const indexes=getFilteredIndexes();if(currentFilteredPos>=indexes.length)currentFilteredPos=Math.max(0,indexes.length-1);renderWeeks();updateStats();renderQuestion()}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+$('filters').addEventListener('click',e=>{const b=e.target.closest('[data-filter]');if(!b)return;filterMode=b.dataset.filter;currentFilteredPos=0;syncFilters();renderQuestion()});$('searchInput').addEventListener('input',e=>{searchTerm=e.target.value.trim();currentFilteredPos=0;renderQuestion()});$('modeSelect').addEventListener('change',e=>{mode=e.target.value;currentFilteredPos=0;renderQuestion();window.scrollTo({top:0,behavior:'smooth'});toast(mode==='mock'?'Mock mode: one question at a time':'Practice mode: all questions on one page')});$('clearFilterBtn').onclick=()=>{filterMode='all';searchTerm='';$('searchInput').value='';currentFilteredPos=0;syncFilters();renderAll()};if($('continueBtn'))$('continueBtn').onclick=()=>{const first=weeks[selectedWeek].questions.findIndex((q,i)=>!getRecord(selectedWeek,i).graded);currentFilteredPos=first<0?0:getFilteredIndexes().indexOf(first);if(currentFilteredPos<0)currentFilteredPos=0;filterMode='all';syncFilters();renderQuestion();document.querySelector('.question-panel').scrollIntoView({behavior:'smooth',block:'start'})};if($('reviewWrongBtn'))$('reviewWrongBtn').onclick=()=>{const found=[];weeks.forEach((w,wi)=>w.questions.forEach((q,qi)=>{const r=getRecord(wi,qi);if(r.graded&&!r.correct)found.push({wi,qi})}));if(!found.length){toast('No mistakes saved yet. Keep practising.');return}selectedWeek=found[0].wi;filterMode='incorrect';searchTerm='';$('searchInput').value='';currentFilteredPos=0;syncFilters();renderAll();toast(`${found.length} incorrect answer${found.length===1?'':'s'} ready to review`)};$('resetWeekBtn').onclick=()=>{if(!confirm(`Reset answers and review marks for Week ${selectedWeek+1}?`))return;weeks[selectedWeek].questions.forEach((_,i)=>delete store.records[key(selectedWeek,i)]);save();filterMode='all';currentFilteredPos=0;syncFilters();renderAll();toast('Week progress reset')};document.addEventListener('keydown',e=>{if(mode!=='mock'||['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName))return;if(['1','2','3','4'].includes(e.key)){const ix=currentIndex();if(ix!==null)chooseAnswer(ix,Number(e.key)-1)}if(e.key==='ArrowRight')move(1);if(e.key==='ArrowLeft')move(-1)});
+renderAll();
+</script>
+</body>
+</html>
