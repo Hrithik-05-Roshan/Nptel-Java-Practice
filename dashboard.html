@@ -157,12 +157,13 @@ a,.footer-note a{color:#8DB5FF!important}
 <body>
 <main class="dashboard-page">
   <header class="dash-topbar">
-    <a class="dash-brand" href="dashboard.html" aria-label="Java Lab dashboard">
+    <a class="dash-brand" href="index.html" aria-label="NPTEL Java home">
       <div class="brand-mark">J//</div><div><div class="brand-name">JAVA LAB</div><div class="brand-sub">NPTEL EXAM PREP</div><div class="dash-builder">Built by Hrithik Burnwal</div></div>
     </a>
     <nav class="dash-nav" aria-label="Main navigation">
+      <a class="btn ghost" href="index.html">Home</a>
       <span class="status-pill"><span class="status-dot"></span> Local progress</span>
-      <a class="btn primary" id="practiceTopLink" href="index.html">Go to practice →</a>
+      <a class="btn primary" id="practiceTopLink" href="practice.html">Go to practice →</a>
     </nav>
   </header>
 
@@ -178,14 +179,14 @@ a,.footer-note a{color:#8DB5FF!important}
   </section>
 
   <section>
-    <div class="dash-section-head"><div><h2>Weekly progress</h2><p id="overallSummary">0 of 120 questions completed</p></div><a class="btn ghost" href="index.html">Open MCQ practice</a></div>
+    <div class="dash-section-head"><div><h2>Weekly progress</h2><p id="overallSummary">0 of 120 questions completed</p></div><a class="btn ghost" href="practice.html">Open MCQ practice</a></div>
     <div class="overall-track" aria-label="Overall completion"><span id="overallProgress"></span></div>
     <div class="week-grid" id="weekGrid"></div>
   </section>
 
   <section class="dash-bottom">
     <div><h3 id="continueTitle">Ready for your first question?</h3><p id="continueText">Choose a week above and start building your score.</p></div>
-    <a class="btn primary" id="continueButton" href="index.html">Continue studying →</a>
+    <a class="btn primary" id="continueButton" href="practice.html">Continue studying →</a>
   </section>
   <footer class="dash-foot"><strong>Built by Hrithik Burnwal</strong> · Independent study tool · Not affiliated with NPTEL or SWAYAM · Progress is stored in this browser.</footer>
 </main>
@@ -238,12 +239,12 @@ weekMeta.forEach((week,i)=>{
   const s=stats(i),pct=Math.round(s.answered/10*100);
   if(firstIncomplete===0 && s.answered<10) firstIncomplete=i+1;
   const card=document.createElement('article');card.className='week-card';
-  card.innerHTML=`<div class="week-card-top"><div><span class="week-number">WEEK ${String(i+1).padStart(2,'0')}</span><h3>${week[0]}</h3><p>${week[1]}</p></div><span class="week-pct">${pct}%</span></div><div class="week-track"><span style="width:${pct}%"></span></div><div class="week-card-footer"><span>${s.answered}/10 completed · ${s.accuracy===null?'No score yet':s.accuracy+'% accuracy'}</span><a class="btn ghost" href="index.html?week=${i+1}">${s.answered===10?'Review week':'Practice'} →</a></div>`;
+  card.innerHTML=`<div class="week-card-top"><div><span class="week-number">WEEK ${String(i+1).padStart(2,'0')}</span><h3>${week[0]}</h3><p>${week[1]}</p></div><span class="week-pct">${pct}%</span></div><div class="week-track"><span style="width:${pct}%"></span></div><div class="week-card-footer"><span>${s.answered}/10 completed · ${s.accuracy===null?'No score yet':s.accuracy+'% accuracy'}</span><a class="btn ghost" href="practice.html?week=${i+1}">${s.answered===10?'Review week':'Practice'} →</a></div>`;
   grid.appendChild(card);
 });
 const next=firstIncomplete||1;
-document.getElementById('practiceTopLink').href=`index.html?week=${next}`;
-document.getElementById('continueButton').href=`index.html?week=${next}`;
+document.getElementById('practiceTopLink').href=`practice.html?week=${next}`;
+document.getElementById('continueButton').href=`practice.html?week=${next}`;
 if(totals.answered>0){document.getElementById('continueTitle').textContent=firstIncomplete?'Keep your streak moving.':'All weeks completed.';document.getElementById('continueText').textContent=firstIncomplete?`Week ${next} is the first week with unanswered questions.`:'Every question has been answered. Review mistakes to sharpen your score.';document.getElementById('continueButton').textContent=firstIncomplete?'Continue studying →':'Review Week 1 →';}
 </script>
 </body>
