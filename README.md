@@ -1,40 +1,124 @@
-# PROGRAMMING IN JAVA — NPTEL Exam Prep
+# Programming in Java — NPTEL Exam Prep
 
-A colourful papercraft-inspired welcome page with a focused MCQ practice app and a separate study dashboard.
+A lightweight, browser-based revision tool for the NPTEL Programming in Java course. Practise 120 multiple-choice questions across 12 weeks, review mistakes, and track your progress without creating an account or installing a framework.
+
+<p align="center">
+  <a href="https://nptel-java-practice-fawn.vercel.app/"><strong>Open Study Hub</strong></a>
+  ·
+  <a href="https://nptel-java-practice-fawn.vercel.app/practice.html"><strong>Start Practising</strong></a>
+  ·
+  <a href="https://nptel-java-practice-fawn.vercel.app/dashboard.html"><strong>View Dashboard</strong></a>
+</p>
+
+## At a glance
+
+- **120 MCQs** organised into **12 weeks**.
+- **Practice mode:** answer questions on a scrollable page and get immediate feedback.
+- **Mock mode:** work through one question at a time and submit your answer to check it.
+- **Progress dashboard:** review completion, accuracy, correct answers, and week-by-week activity.
+- **Revision tools:** search questions, filter unanswered or incorrect questions, and mark questions for review.
+- **Local-first progress:** answers are saved in your browser, with no account required.
+- **Static site:** HTML, CSS, and JavaScript. No package installation or build step.
+
+## Live pages
+
+| Page | What it does |
+| --- | --- |
+| [Study hub](https://nptel-java-practice-fawn.vercel.app/) | Course overview, quick navigation, progress summary, and exam information |
+| [MCQ practice](https://nptel-java-practice-fawn.vercel.app/practice.html) | Select a week, answer questions, filter/search, and review explanations |
+| [Progress dashboard](https://nptel-java-practice-fawn.vercel.app/dashboard.html) | See saved performance and progress across the 12-week track |
+
+## Screens and workflow
+
+1. Open the [Study Hub](https://nptel-java-practice-fawn.vercel.app/).
+2. Choose a week or jump straight to the [practice page](https://nptel-java-practice-fawn.vercel.app/practice.html).
+3. Use **Practice mode** for instant answer feedback, or **Mock mode** to check answers after selecting them.
+4. Mark difficult questions for review and use the filters to revisit unanswered or incorrect questions.
+5. Open the dashboard to check progress and accuracy.
+
+### Open a specific week
+
+Append a `week` query parameter from 1 to 12:
+
+- `practice.html?week=1`
+- `practice.html?week=6`
+- `practice.html?week=12`
+
+Example: [Open Week 1](https://nptel-java-practice-fawn.vercel.app/practice.html?week=1).
 
 ## Run locally
 
+No Node.js, dependencies, or build command are required.
+
+### Option 1: open the files
+
 1. Clone or download this repository.
-2. Open `index.html` for the welcome page.
-3. Open `dashboard.html` to see your study progress.
-4. Open `practice.html` to practise MCQs.
-5. No build step or package installation is required for the static pages.
+2. Open `index.html` in your browser.
+3. Open `practice.html` for questions or `dashboard.html` for progress.
 
-## Pages
+Browser restrictions can make storage behaviour for directly opened `file://` pages inconsistent. Use a local server for reliable progress sharing between pages.
 
-- `index.html`: Welcome homepage, study navigation, exam schedule, certification rules and certificate details.
-- `dashboard.html`: Overall completion, accuracy, correct answers, review queue and week-by-week progress.
-- `practice.html`: Week-by-week MCQ practice, scrollable Practice mode, one-question-at-a-time Mock mode, search, review markers and answer feedback. `practice.html?week=1` through `practice.html?week=12` opens a selected week.
+### Option 2: serve the folder locally
 
-## Progress storage
+```bash
+git clone https://github.com/Hrithik-05-Roshan/Nptel-Java-Practice.git
+cd Nptel-Java-Practice
+python -m http.server 8000
+```
 
-The dashboard and practice page use the same browser storage key (`java-nptel-mcq-lab-v3`) so progress is shared when hosted on the same origin (for example on Vercel). Browser handling of `file://` storage can vary; for reliable cross-page progress sync, serve the files from one local server or deploy them to the same site.
+Then visit [http://localhost:8000](http://localhost:8000).
 
-## Question sources
+## Progress and privacy
 
-- Weeks 1–6 are based on the NPTEL/SWAYAM assignment screenshots supplied. Some small or blurry code text was reconstructed into readable examples.
-- Weeks 7–12 use supplied question-and-answer material and screenshots, reconstructing a few unreadable snippets as equivalent practice examples.
+- Practice and dashboard pages use the same localStorage key: `java-nptel-mcq-lab-v3`.
+- Progress is saved in the browser on the current device and browser profile.
+- Progress is **not** synced across devices and is not stored in a remote database.
+- Clearing site data or browser storage can delete saved progress.
+- For cross-page sync to work as expected, open the pages from the same origin (for example, the deployed Vercel site or one local server).
 
-This is an independent study tool and is not affiliated with NPTEL or SWAYAM. Study progress is stored in the browser and is not synced between devices.
+## Question bank and accuracy notes
 
-## UI details
+The question bank was assembled from assignment screenshots and question/answer material supplied for study preparation. Some small or blurry code snippets were reconstructed as readable, equivalent examples.
 
-- Study pages use a dark theme with background `#10141F`, foreground `#E4E4E4` and accent `#003C9C`.
-- The homepage uses a colourful, layered papercraft theme and Lucide icons.
-- Practice mode displays all matching questions on one scrollable page.
-- Mock mode displays one question at a time, with submit-to-check behaviour.
-- Built by Hrithik Burnwal.
+Treat this as a **revision aid**, not an official answer key. Check course materials and official NPTEL/SWAYAM announcements if an answer, interpretation, exam rule, or date matters to your preparation.
 
 ## Exam information
 
-The homepage reflects the course/exam details supplied for October 25, 2026. Check official NPTEL course announcements and the published registration form for updates, fee payment instructions, exam centres and conditions.
+The study hub includes exam and certification details supplied for the **October 25, 2026** exam. Exam dates, sessions, fees, eligibility rules, centres, and registration instructions can change. Verify the latest details through official NPTEL/SWAYAM course announcements before making exam arrangements.
+
+## Tech stack
+
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- Browser localStorage for progress
+- Lucide icons
+- Vercel for deployment
+
+## Project structure
+
+```text
+.
+├── index.html       # Study hub and exam information
+├── practice.html    # 12-week, 120-question MCQ practice app
+├── dashboard.html   # Progress and performance dashboard
+└── README.md        # Project documentation
+```
+
+## Limitations
+
+- No account system or cloud sync.
+- Saved progress belongs to the current browser/device.
+- Question wording may differ from the official assignment if an image was unreadable and had to be reconstructed.
+- This project is independent and is **not affiliated with NPTEL or SWAYAM**.
+
+## Author
+
+**Hrithik Burnwal**
+
+- GitHub: [@Hrithik-05-Roshan](https://github.com/Hrithik-05-Roshan)
+- Repository: [Nptel-Java-Practice](https://github.com/Hrithik-05-Roshan/Nptel-Java-Practice)
+
+---
+
+Built for focused Java revision. Good luck with the exam.
