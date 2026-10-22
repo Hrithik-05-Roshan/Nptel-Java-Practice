@@ -4,145 +4,208 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#10141F">
-<meta name="description" content="A colourful, friendly home for NPTEL Programming in Java exam preparation. Check exam details, understand certificate criteria, and jump into MCQ practice.">
-<title>NPTEL Java Exam Prep | Welcome</title>
+<meta name="description" content="A minimal study home for NPTEL Programming in Java exam preparation, with MCQ practice, exam details and certificate criteria.">
+<title>NPTEL Java Exam Prep</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/lucide@latest"></script>
 <style>
-:root{color-scheme:dark;--bg:#10141F;--ink:#192131;--paper:#F8F3E8;--paper2:#FDFBF5;--muted:#ABB4C2;--line:#30394A;--blue:#85B7FF;--deep:#003C9C;--yellow:#FFD166;--coral:#FF8C78;--mint:#8BE0C0;--lilac:#C2AEFF;--sky:#A7D4FF;--shadow:0 10px 0 #050811,0 18px 30px #0004}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}
-body{margin:0;background:var(--bg);color:#E4E4E4;font-family:"DM Sans",system-ui,-apple-system,Segoe UI,sans-serif;line-height:1.55;overflow-x:hidden}
-a{color:inherit;text-decoration:none}button,a{-webkit-tap-highlight-color:transparent}a:focus-visible,button:focus-visible{outline:3px solid var(--yellow);outline-offset:4px}
-.wrap{width:min(1160px,calc(100% - 40px));margin:0 auto}
-.topbar{position:sticky;top:0;z-index:10;background:#10141Ff2;backdrop-filter:blur(14px);border-bottom:1px solid #2a3241}
-.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{display:flex;align-items:center;gap:12px;min-width:max-content}.brand-mark{width:42px;height:42px;display:grid;place-items:center;background:var(--yellow);color:#222537;border:2px solid #1a2030;box-shadow:4px 4px 0 var(--coral);transform:rotate(-4deg);border-radius:9px}
-.brand-copy b{display:block;font:700 15px/1.2 "Space Grotesk",sans-serif;letter-spacing:.02em}.brand-copy span{font-size:10px;color:#9DA8B9;letter-spacing:.14em;text-transform:uppercase}
-.navlinks{display:flex;align-items:center;gap:20px;font-size:12px;font-weight:700;color:#BBC4D2}.navlinks a:hover{color:#fff}.navactions{display:flex;align-items:center;gap:9px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:11px 15px;border:1px solid #394457;border-radius:9px;font-size:12px;font-weight:800;transition:transform .18s,box-shadow .18s,background .18s;color:#E4E4E4;background:#1B2230}
-.btn svg{width:16px;height:16px}.btn:hover{transform:translateY(-2px)}.btn.primary{background:var(--yellow);color:#222537;border:2px solid #202638;box-shadow:4px 4px 0 #80572c}.btn.primary:hover{box-shadow:6px 6px 0 #80572c;transform:translate(-1px,-2px)}.btn.paper-blue{background:var(--sky);color:#18263d;border:2px solid #243049;box-shadow:4px 4px 0 #304c82}.btn.ghost{background:transparent}
-.hero{padding:54px 0 28px;position:relative}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:42px;align-items:center}
-.kicker{display:inline-flex;align-items:center;gap:8px;color:var(--mint);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.17em}.kicker svg{width:16px;height:16px}
-h1,h2,h3,p{margin-top:0}h1{font:700 clamp(38px,5.2vw,66px)/1.04 "Space Grotesk",sans-serif;letter-spacing:-.055em;margin:17px 0 18px;max-width:700px}
-h1 .highlight{color:var(--yellow);display:inline-block;position:relative;white-space:nowrap}h1 .highlight:after{content:"";position:absolute;left:0;right:0;bottom:0;height:7px;background:var(--coral);z-index:-1;transform:rotate(-1deg)}
-.hero-copy{font-size:15px;color:#B9C3D0;max-width:560px;margin-bottom:24px}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
-.trustline{display:flex;flex-wrap:wrap;gap:14px;margin-top:23px;color:#9AA6B8;font-size:11px}.trustline span{display:inline-flex;align-items:center;gap:7px}.trustline svg{width:15px;height:15px;color:var(--mint)}
-.hero-art{min-height:405px;position:relative;display:grid;place-items:center;isolation:isolate}.paper{position:relative;color:var(--ink);border:2px solid #252c3a;border-radius:5px;box-shadow:var(--shadow)}
-.paper:after{content:"";position:absolute;right:-2px;bottom:-2px;width:23px;height:23px;background:linear-gradient(135deg,transparent 49%,#d4c7ab 50%);border-left:2px solid #252c3a;border-top:2px solid #252c3a;clip-path:polygon(0 0,0 100%,100% 100%);opacity:.9}
-.course-paper{width:min(360px,92%);padding:27px 27px 30px;background:var(--paper);transform:rotate(2deg);z-index:2}.course-paper:before{content:"";position:absolute;inset:0;z-index:-1;background:var(--lilac);border:2px solid #252c3a;transform:translate(10px,11px) rotate(-3deg);border-radius:5px}
-.stamp{display:inline-flex;align-items:center;gap:7px;background:var(--mint);border:1.5px solid #263548;padding:6px 9px;font-size:9px;letter-spacing:.13em;text-transform:uppercase;font-weight:900}.stamp svg{width:14px;height:14px}
-.course-paper h2{font:700 30px/1.02 "Space Grotesk",sans-serif;margin:21px 0 12px;letter-spacing:-.04em}.course-paper p{font-size:12px;color:#4a5364;margin-bottom:18px}.paper-rule{height:2px;background:#D6D0C2;margin:16px 0}
-.paper-meta{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#50586A;font-size:10px;font-weight:800}.paper-meta span{display:flex;gap:6px;align-items:center}.paper-meta svg{width:14px;height:14px}
-.floating-note{position:absolute;display:flex;align-items:center;gap:10px;padding:12px 14px;border:2px solid #222b3b;box-shadow:5px 5px 0 #050811;font-size:11px;font-weight:800;z-index:3}.floating-note svg{width:19px;height:19px}.note-free{top:18px;right:0;background:var(--yellow);transform:rotate(5deg)}.note-score{bottom:22px;left:0;background:var(--coral);transform:rotate(-4deg)}.note-learn{bottom:70px;right:3px;background:var(--mint);transform:rotate(3deg)}
-.doodle{position:absolute;z-index:-1;color:var(--lilac);opacity:.9}.doodle svg{width:36px;height:36px;stroke-width:2.4}.doodle.star{top:42px;left:6%;transform:rotate(-12deg)}.doodle.spark{right:10%;top:95px;color:var(--coral);transform:rotate(13deg)}.doodle.sun{bottom:45px;right:16%;color:var(--yellow);transform:rotate(-8deg)}
-.ribbon{padding:18px 0 30px}.ribbon-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.ribbon-card{display:flex;align-items:center;gap:13px;padding:15px 17px;border:1.5px solid #30394A;border-radius:8px;background:#171D2A}.ribbon-card .iconbox{width:40px;height:40px;display:grid;place-items:center;border:2px solid #202a3b;box-shadow:3px 3px 0 #080b12;border-radius:6px;flex-shrink:0;color:#182132}.ribbon-card svg{width:20px;height:20px}.ribbon-card:nth-child(1) .iconbox{background:var(--yellow)}.ribbon-card:nth-child(2) .iconbox{background:var(--mint)}.ribbon-card:nth-child(3) .iconbox{background:var(--lilac)}.ribbon-card b{display:block;font-size:12px}.ribbon-card span{display:block;font-size:11px;color:#A7B1C0;margin-top:2px}
-.section{padding:54px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:22px;margin-bottom:25px}.section-label{display:flex;align-items:center;gap:8px;font-size:10px;letter-spacing:.16em;font-weight:900;text-transform:uppercase;color:var(--blue)}.section-label svg{width:16px;height:16px}
-h2.section-title{font:700 clamp(26px,3.4vw,39px)/1.08 "Space Grotesk",sans-serif;letter-spacing:-.04em;margin:10px 0 8px}.section-sub{font-size:13px;color:#AEB8C7;max-width:620px;margin:0}
-.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.feature-card{min-height:218px;padding:23px 22px 25px;position:relative;overflow:hidden}
-.feature-card:nth-child(1){background:var(--yellow);transform:rotate(-.5deg)}.feature-card:nth-child(2){background:var(--mint);transform:rotate(.45deg)}.feature-card:nth-child(3){background:var(--lilac);transform:rotate(-.35deg)}
-.feature-card .feature-icon{width:46px;height:46px;display:grid;place-items:center;border:2px solid #263044;box-shadow:4px 4px 0 #111725;border-radius:7px;background:#fff9}.feature-card svg{width:23px;height:23px}.feature-card h3{font:700 20px/1.2 "Space Grotesk",sans-serif;margin:18px 0 8px;color:#1d2636}.feature-card p{font-size:12px;line-height:1.7;color:#3e485a;margin:0;max-width:310px}.feature-card:after{content:"";position:absolute;right:-28px;bottom:-29px;width:95px;height:95px;border:2px dashed #1d2636;border-radius:50%;opacity:.28}
-.exam-area{background:#151B28;border:1px solid #30394A;border-radius:14px;padding:24px;position:relative}.exam-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:20px;align-items:stretch}
-.exam-paper{background:var(--paper);border:2px solid #202a39;box-shadow:6px 6px 0 #050811;border-radius:5px;color:var(--ink);padding:24px;position:relative}.exam-paper:before{content:"";position:absolute;top:9px;left:10px;right:10px;height:5px;background:repeating-linear-gradient(90deg,var(--coral) 0 18px,transparent 18px 25px,var(--yellow) 25px 43px,transparent 43px 50px,var(--mint) 50px 68px,transparent 68px 75px)}
-.exam-paper .section-label{color:#315ea8;margin-top:8px}.exam-date{font:700 clamp(29px,3vw,39px)/1.08 "Space Grotesk",sans-serif;letter-spacing:-.04em;margin:15px 0 10px}.exam-paper p{font-size:12px;color:#596274;margin-bottom:0}
-.session-list{display:grid;gap:10px;margin-top:19px}.session{display:grid;grid-template-columns:43px 1fr auto;align-items:center;gap:12px;padding:12px;background:#FFFEFA;border:1.5px solid #ded7c9;border-radius:6px}.session .session-icon{width:38px;height:38px;display:grid;place-items:center;border:1.5px solid #252e3e;background:var(--yellow);border-radius:5px}.session:nth-child(2) .session-icon{background:var(--coral)}.session svg{width:19px;height:19px}.session b{display:block;font-size:12px;color:#202a3a}.session span{display:block;font-size:11px;color:#697386}.session time{font-size:11px;font-weight:800;color:#2d3748;white-space:nowrap}
-.exam-facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:13px}.fact{padding:14px;background:#1B2230;border:1px solid #394356;border-radius:7px}.fact .fact-icon{width:30px;height:30px;border-radius:5px;display:grid;place-items:center;background:#283348;color:var(--blue);margin-bottom:9px}.fact svg{width:17px;height:17px}.fact b{display:block;font-size:13px;color:#fff}.fact span{display:block;font-size:11px;color:#AEB8C7;margin-top:3px}
-.notice{display:flex;align-items:flex-start;gap:12px;padding:15px;background:#282235;border:1px dashed #8F7AC0;border-radius:7px}.notice svg{flex-shrink:0;color:var(--lilac);width:20px;height:20px}.notice b{display:block;font-size:12px;color:#F0E9FF;margin-bottom:4px}.notice p{font-size:11px;color:#D0C8E1;margin:0;line-height:1.7}.notice a{color:#F6D77C;text-decoration:underline;text-underline-offset:3px}
-.grade-intro{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-bottom:20px}.score-total{font:700 26px "Space Grotesk",sans-serif;color:var(--yellow)}.grade-bar{height:18px;border:2px solid #222c3c;display:flex;overflow:hidden;border-radius:4px;box-shadow:3px 3px 0 #060910;margin:18px 0 22px}.grade-bar .assignment-part{width:25%;background:var(--mint);border-right:2px solid #222c3c}.grade-bar .exam-part{width:75%;background:var(--coral)}
-.grade-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.grade-card{padding:22px;border:2px solid #252e3d;border-radius:5px;color:var(--ink);position:relative;box-shadow:5px 5px 0 #050811}.grade-card.assignment{background:var(--mint);transform:rotate(-.3deg)}.grade-card.exam{background:var(--coral);transform:rotate(.25deg)}
-.grade-card .grade-top{display:flex;align-items:center;justify-content:space-between;gap:12px}.grade-card .grade-icon{width:40px;height:40px;background:#FFFA;border:1.5px solid #293347;display:grid;place-items:center;border-radius:6px}.grade-card svg{width:20px;height:20px}.grade-number{font:700 33px/1 "Space Grotesk",sans-serif;letter-spacing:-.04em}.grade-card h3{font:700 19px/1.2 "Space Grotesk",sans-serif;margin:18px 0 8px}.grade-card p{font-size:12px;color:#344054;margin:0;line-height:1.7}.threshold{margin-top:15px;padding-top:13px;border-top:1.5px dashed #566174;font-size:11px;font-weight:800}
-.eligibility-alert{display:flex;align-items:flex-start;gap:13px;margin-top:18px;padding:17px 19px;border:1px solid #7A4C43;background:#2A2026;border-radius:8px}.eligibility-alert svg{width:22px;height:22px;flex-shrink:0;color:var(--yellow)}.eligibility-alert b{display:block;color:#FFF0CC;font-size:13px;margin-bottom:4px}.eligibility-alert p{margin:0;color:#DECFC8;font-size:12px;line-height:1.7}
-.cert-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:18px}.cert-paper{padding:24px;background:var(--paper);border:2px solid #242d3d;box-shadow:6px 6px 0 #050811;color:var(--ink);position:relative;transform:rotate(-.35deg)}.cert-paper .cert-logos{display:flex;align-items:center;gap:10px;margin-bottom:24px}.logo-stub{width:45px;height:45px;border:1.5px solid #394457;border-radius:50%;display:grid;place-items:center;background:var(--sky);font:700 11px "Space Grotesk",sans-serif}.logo-stub:nth-child(2){background:var(--yellow)}.logo-stub svg{width:22px;height:22px}.cert-paper h3{font:700 25px/1.13 "Space Grotesk",sans-serif;margin:0 0 9px}.cert-paper p{font-size:12px;color:#586276;margin:0 0 21px}.cert-lines{display:grid;gap:8px}.cert-lines span{height:5px;background:#DCD5C8;border-radius:2px}.cert-lines span:nth-child(1){width:100%}.cert-lines span:nth-child(2){width:86%}.cert-lines span:nth-child(3){width:65%}
-.cert-details{display:grid;gap:10px}.detail{display:flex;align-items:flex-start;gap:13px;padding:16px;background:#171D2A;border:1px solid #30394A;border-radius:7px}.detail-icon{flex-shrink:0;width:35px;height:35px;display:grid;place-items:center;background:#263146;border-radius:6px;color:var(--blue)}.detail-icon svg{width:19px;height:19px}.detail b{display:block;font-size:12px;margin-bottom:4px}.detail p{margin:0;font-size:11px;color:#AEB8C7;line-height:1.75}.detail a{color:var(--yellow);text-decoration:underline;text-underline-offset:3px}
-.bottom-cta{padding:27px;background:var(--lilac);border:2px solid #222c3d;box-shadow:7px 7px 0 #050811;border-radius:6px;color:#1C2434;display:flex;align-items:center;justify-content:space-between;gap:20px;position:relative;overflow:hidden}.bottom-cta h2{font:700 clamp(24px,3vw,35px)/1.1 "Space Grotesk",sans-serif;margin:0 0 8px;letter-spacing:-.04em}.bottom-cta p{margin:0;color:#42475a;font-size:12px;max-width:520px}.bottom-cta .btn{background:#192131;color:#fff;border-color:#192131;box-shadow:4px 4px 0 #fff7;flex-shrink:0}
-footer{padding:29px 0 36px;color:#8B97A8;font-size:11px}.foot-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;border-top:1px solid #2B3342;padding-top:20px}.foot-credit{color:#DDE3EC;font-weight:800}.foot-links{display:flex;gap:16px;flex-wrap:wrap}.foot-links a:hover{color:#fff}
-@media(max-width:900px){.hero-grid{grid-template-columns:1fr .85fr;gap:23px}.hero-art{min-height:360px}.course-paper{padding:22px}.feature-grid{gap:12px}.feature-card{padding:19px 17px}.exam-grid{grid-template-columns:1fr}.exam-facts{grid-template-columns:1fr 1fr}}
-@media(max-width:700px){.wrap{width:min(100% - 28px,560px)}.nav{min-height:66px}.navlinks{display:none}.navactions .btn.ghost{display:none}.brand-mark{width:38px;height:38px}.hero{padding:38px 0 14px}.hero-grid{grid-template-columns:1fr;gap:7px}.hero-copy{font-size:14px}.hero-art{min-height:355px;margin:5px 0}.course-paper{width:min(330px,84%)}.note-free{right:1%}.note-score{left:1%}.note-learn{right:0}.ribbon-grid{grid-template-columns:1fr;gap:8px}.ribbon-card{padding:12px}.section{padding:37px 0}.section-head{align-items:flex-start;flex-direction:column}.feature-grid{grid-template-columns:1fr;gap:14px;padding:0 4px}.feature-card{min-height:0}.exam-area{padding:12px}.exam-paper{padding:19px}.exam-facts{grid-template-columns:1fr 1fr;gap:8px}.fact{padding:12px}.session{grid-template-columns:38px 1fr;gap:9px}.session time{grid-column:2}.grade-grid,.cert-grid{grid-template-columns:1fr;gap:14px}.grade-card{padding:18px}.eligibility-alert{padding:14px}.bottom-cta{flex-direction:column;align-items:flex-start;padding:22px}.bottom-cta .btn{width:100%}.foot-inner{align-items:flex-start;flex-direction:column}.hero h1{font-size:clamp(39px,12vw,57px)}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+:root{color-scheme:dark;--bg:#10141F;--panel:#171C28;--panel2:#1C2230;--line:#30394A;--text:#E4E4E4;--muted:#A6AFBE;--accent:#003C9C;--accent-soft:#172746;--good:#8BD5AE;--radius:12px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:82px}
+body{margin:0;background:var(--bg);color:var(--text);font:14px/1.6 "DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:inherit;text-decoration:none}
+a:focus-visible{outline:2px solid #85B5FF;outline-offset:4px}
+button,a{-webkit-tap-highlight-color:transparent}
+.wrap{width:min(100% - 40px,1000px);margin:0 auto}
+.topbar{position:sticky;top:0;z-index:5;background:#10141Ff2;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+.nav{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:10px}
+.brand-mark{width:34px;height:34px;border-radius:8px;background:var(--accent);display:grid;place-items:center;color:white}
+.brand-mark svg{width:17px;height:17px}
+.brand-name{font:700 14px/1.25 "Space Grotesk",sans-serif;letter-spacing:.02em}
+.brand-sub{font-size:10px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.navlinks{display:flex;align-items:center;gap:19px;color:var(--muted);font-size:12px;font-weight:600}
+.navlinks a:hover{color:var(--text)}
+.actions{display:flex;gap:8px;align-items:center}
+.btn{min-height:38px;display:inline-flex;justify-content:center;align-items:center;gap:8px;padding:9px 12px;border:1px solid var(--line);border-radius:8px;background:var(--panel);font-size:12px;font-weight:700;transition:background .15s,border-color .15s}
+.btn svg{width:15px;height:15px}
+.btn:hover{background:var(--panel2);border-color:#49566c}
+.btn.primary{background:var(--accent);border-color:#2457a3;color:#fff}
+.btn.primary:hover{background:#0649b4}
+.hero{padding:66px 0 48px;border-bottom:1px solid #242c3a}
+.eyebrow{display:flex;align-items:center;gap:8px;color:#9CB9EF;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.eyebrow svg{width:15px;height:15px}
+h1,h2,h3,p{margin-top:0}
+h1{font:700 clamp(34px,5vw,52px)/1.1 "Space Grotesk",sans-serif;letter-spacing:-.045em;max-width:670px;margin:15px 0 15px}
+.hero p{max-width:620px;color:var(--muted);font-size:15px;margin-bottom:22px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:18px;margin-top:22px;color:var(--muted);font-size:11px}
+.hero-meta span{display:flex;align-items:center;gap:6px}
+.hero-meta svg{width:14px;height:14px;color:#91AEE4}
+.section{padding:38px 0;border-bottom:1px solid #242c3a}
+.section-heading{margin-bottom:19px}
+.section-kicker{display:flex;align-items:center;gap:7px;color:#9CB9EF;font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.section-kicker svg{width:14px;height:14px}
+h2{font:600 24px/1.25 "Space Grotesk",sans-serif;letter-spacing:-.025em;margin:8px 0}
+.section-heading p{max-width:680px;color:var(--muted);font-size:12px;margin:0}
+.exam-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.info-card{padding:18px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius)}
+.info-top{display:flex;align-items:center;gap:9px;margin-bottom:10px}
+.info-icon{width:31px;height:31px;display:grid;place-items:center;background:var(--panel2);border:1px solid #354052;border-radius:8px;color:#A8C5F5}
+.info-icon svg{width:16px;height:16px}
+.info-card h3{font-size:13px;margin:0;font-weight:800}
+.date{font:700 23px/1.25 "Space Grotesk",sans-serif;letter-spacing:-.03em;margin:7px 0}
+.muted{color:var(--muted)}
+.session-list{display:grid;gap:8px;margin-top:14px}
+.session{display:flex;justify-content:space-between;gap:12px;padding:10px 11px;background:#121722;border:1px solid #293242;border-radius:8px;font-size:12px}
+.session strong{font-weight:700}
+.session span{color:var(--muted);white-space:nowrap}
+.callout{margin-top:12px;padding:14px 16px;display:flex;gap:10px;background:var(--accent-soft);border:1px solid #294572;border-radius:9px}
+.callout svg{width:17px;height:17px;flex-shrink:0;color:#A9C8FF;margin-top:2px}
+.callout p{margin:0;color:#C4D3EB;font-size:12px}
+.callout a{text-decoration:underline;text-underline-offset:3px}
+.score-bar{height:8px;display:flex;overflow:hidden;background:#222b3b;border-radius:99px;margin:12px 0 17px}
+.score-bar .assignment{width:25%;background:#7796D2}
+.score-bar .exam{width:75%;background:#355d9f}
+.score-split{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.score-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.score-card .weight{font:700 27px/1.15 "Space Grotesk",sans-serif;color:#A8C5F5}
+.score-card h3{font-size:13px;margin:7px 0}
+.score-card p{color:var(--muted);font-size:12px;margin:0}
+.threshold{margin-top:11px;padding-top:10px;border-top:1px solid #30394A;font-size:11px;font-weight:700;color:#D8E2F1}
+.warning{display:flex;align-items:flex-start;gap:10px;margin-top:12px;padding:14px 16px;background:#211F20;border:1px solid #4B3A35;border-radius:9px}
+.warning svg{width:17px;height:17px;flex-shrink:0;color:#E3B98A;margin-top:2px}
+.warning p{margin:0;color:#D8C8B9;font-size:12px}
+.certificate-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.detail{display:flex;align-items:flex-start;gap:10px;padding:15px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius)}
+.detail svg{width:17px;height:17px;flex-shrink:0;color:#A8C5F5;margin-top:2px}
+.detail strong{display:block;font-size:12px;margin-bottom:3px}
+.detail p{color:var(--muted);font-size:11px;margin:0}
+.detail a{color:#A8C5F5;text-decoration:underline;text-underline-offset:3px}
+.cta{padding:26px 0 38px}
+.cta-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:21px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius)}
+.cta h2{font-size:20px;margin:0 0 5px}
+.cta p{color:var(--muted);font-size:12px;margin:0}
+footer{padding:17px 0 25px;border-top:1px solid #242c3a;color:var(--muted);font-size:11px}
+.footer-row{display:flex;justify-content:space-between;gap:15px;align-items:center;flex-wrap:wrap}
+.credit{color:var(--text);font-weight:700}
+@media(max-width:700px){.wrap{width:min(100% - 28px,560px)}.nav{min-height:62px}.navlinks{display:none}.actions .btn.ghost{display:none}.hero{padding:45px 0 35px}.hero p{font-size:14px}.section{padding:29px 0}.exam-grid,.score-split,.certificate-row{grid-template-columns:1fr}.session{align-items:flex-start;flex-direction:column;gap:2px}.cta-inner{align-items:flex-start;flex-direction:column}.cta-inner .btn{width:100%}h2{font-size:22px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 </style>
 </head>
 <body>
 <header class="topbar">
   <div class="wrap nav">
-    <a class="brand" href="index.html" aria-label="Java Lab home">
-      <span class="brand-mark"><i data-lucide="layers"></i></span>
-      <span class="brand-copy"><b>JAVA LAB</b><span>NPTEL Exam Prep</span></span>
+    <a class="brand" href="index.html" aria-label="Java Exam Prep home">
+      <span class="brand-mark"><i data-lucide="code-2"></i></span>
+      <span><span class="brand-name">JAVA EXAM PREP</span><span class="brand-sub" style="display:block">NPTEL · Programming in Java</span></span>
     </a>
-    <nav class="navlinks" aria-label="Main navigation">
-      <a href="#study">Study tools</a><a href="#exam">Exam details</a><a href="#certificate">Certificate criteria</a>
+    <nav class="navlinks" aria-label="Page navigation">
+      <a href="#exam">Exam details</a><a href="#criteria">Certificate criteria</a>
     </nav>
-    <div class="navactions">
+    <div class="actions">
       <a class="btn ghost" href="dashboard.html"><i data-lucide="layout-dashboard"></i> Dashboard</a>
-      <a class="btn primary" href="practice.html">Start practising <i data-lucide="arrow-up-right"></i></a>
+      <a class="btn primary" href="practice.html"><i data-lucide="book-open"></i> Practise MCQs</a>
     </div>
   </div>
 </header>
+
 <main>
-  <section class="hero"><div class="wrap hero-grid">
-    <div>
-      <div class="kicker"><i data-lucide="sparkles"></i> Your study space · built for focus</div>
-      <h1>Welcome to your <span class="highlight">Java journey.</span></h1>
-      <p class="hero-copy">A friendly home base for your NPTEL Programming in Java exam prep. Practise week by week, keep your progress in sight, and understand the certification rules before exam day.</p>
-      <div class="hero-actions"><a class="btn primary" href="dashboard.html"><i data-lucide="layout-dashboard"></i> Open study dashboard <i data-lucide="arrow-right"></i></a><a class="btn paper-blue" href="practice.html"><i data-lucide="book-open-check"></i> Practise MCQs</a></div>
-      <div class="trustline"><span><i data-lucide="check-circle-2"></i> Course learning is free</span><span><i data-lucide="calendar-check"></i> Exam: 25 October 2026</span></div>
-    </div>
-    <div class="hero-art" aria-label="Colourful paper collage for Java study">
-      <span class="doodle star"><i data-lucide="star"></i></span><span class="doodle spark"><i data-lucide="sparkle"></i></span><span class="doodle sun"><i data-lucide="sun"></i></span>
-      <div class="floating-note note-free"><i data-lucide="graduation-cap"></i><span>Learn free<br>at your own pace</span></div>
-      <article class="paper course-paper"><span class="stamp"><i data-lucide="coffee"></i> Study · revise · repeat</span><h2>PROGRAMMING<br>IN JAVA</h2><p>NPTEL certification exam prep, organised into a simple weekly practice flow.</p><div class="paper-rule"></div><div class="paper-meta"><span><i data-lucide="calendar-days"></i> 12 weeks</span><span><i data-lucide="list-checks"></i> 120 MCQs</span></div></article>
-      <div class="floating-note note-score"><i data-lucide="chart-no-axes-combined"></i><span>Build confidence,<br>one question at a time</span></div><div class="floating-note note-learn"><i data-lucide="bookmark-check"></i><span>Save tricky questions<br>for a second pass</span></div>
-    </div>
-  </div></section>
-  <section class="ribbon" aria-label="At a glance"><div class="wrap ribbon-grid">
-    <article class="ribbon-card"><span class="iconbox"><i data-lucide="book-open"></i></span><div><b>Free to learn</b><span>Course learning is free to enrol in.</span></div></article>
-    <article class="ribbon-card"><span class="iconbox"><i data-lucide="wallet"></i></span><div><b>Optional certificate exam</b><span>₹1,000 exam fee if you want certification.</span></div></article>
-    <article class="ribbon-card"><span class="iconbox"><i data-lucide="layers-3"></i></span><div><b>All in one study space</b><span>Dashboard, practice sets and mock mode.</span></div></article>
-  </div></section>
-  <section class="section" id="study"><div class="wrap">
-    <div class="section-head"><div><div class="section-label"><i data-lucide="compass"></i> Make your next move</div><h2 class="section-title">Your prep, without the clutter.</h2><p class="section-sub">Start where you are. Use the dashboard for the big picture, then jump into a week and work through the questions.</p></div></div>
-    <div class="feature-grid">
-      <article class="paper feature-card"><span class="feature-icon"><i data-lucide="layout-dashboard"></i></span><h3>See your progress</h3><p>Track completed questions, accuracy, review marks and weekly progress from one dashboard.</p></article>
-      <article class="paper feature-card"><span class="feature-icon"><i data-lucide="list-checks"></i></span><h3>Practise your way</h3><p>Use Practice mode for all questions on a scrolling page, or Mock mode for one question at a time.</p></article>
-      <article class="paper feature-card"><span class="feature-icon"><i data-lucide="bookmark"></i></span><h3>Return to tricky ones</h3><p>Bookmark questions, filter mistakes and revisit concepts that need one more pass.</p></article>
-    </div>
-  </div></section>
-  <section class="section" id="exam"><div class="wrap">
-    <div class="section-head"><div><div class="section-label"><i data-lucide="calendar-clock"></i> Certification exam</div><h2 class="section-title">Know the date. Know the details.</h2><p class="section-sub">The course is free to enrol in and learn from. The in-person proctored exam is optional and fee-based if you want a certificate.</p></div></div>
-    <div class="exam-area"><div class="exam-grid">
-      <article class="exam-paper"><div class="section-label"><i data-lucide="calendar-days"></i> Exam date</div><div class="exam-date">October 25,<br>2026</div><p>The certification exam is conducted in person at designated exam centres. Please check the official registration form for cities, conditions and exam-centre details when it is published.</p>
-        <div class="session-list">
-          <div class="session"><span class="session-icon"><i data-lucide="sunrise"></i></span><div><b>Morning session</b><span>Reporting details are in the exam form</span></div><time>9 AM – 12 PM</time></div>
-          <div class="session"><span class="session-icon"><i data-lucide="sunset"></i></span><div><b>Afternoon session</b><span>Reporting details are in the exam form</span></div><time>2 PM – 5 PM</time></div>
-        </div>
-      </article>
-      <div><div class="exam-facts">
-        <article class="fact"><span class="fact-icon"><i data-lucide="wallet"></i></span><b>₹1,000</b><span>Optional certification exam fee</span></article>
-        <article class="fact"><span class="fact-icon"><i data-lucide="map-pinned"></i></span><b>In person</b><span>At a designated exam centre</span></article>
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow"><i data-lucide="graduation-cap"></i> Your study space</div>
+      <h1>Prepare for your NPTEL Java exam with confidence.</h1>
+      <p>Practise all 12 weeks of MCQs, review your mistakes, and track your progress. Course learning is free; the in-person certification exam is optional.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="dashboard.html"><i data-lucide="layout-dashboard"></i> Open dashboard <i data-lucide="arrow-right"></i></a>
+        <a class="btn" href="practice.html"><i data-lucide="list-checks"></i> Start practising</a>
       </div>
-      <div class="notice"><i data-lucide="bell-ring"></i><div><b>Registration form announcement pending</b><p>NPTEL says registration announcements will be made when the form opens. Follow official course announcements for registration, payment, available cities and the terms you must agree to. Don’t rely on unofficial registration links.</p><p style="margin-top:10px"><a href="https://nptel.ac.in/" target="_blank" rel="noopener noreferrer">Visit the official NPTEL website ↗</a></p></div></div></div>
-    </div></div>
-  </div></section>
-  <section class="section" id="certificate"><div class="wrap">
-    <div class="section-head"><div><div class="section-label"><i data-lucide="badge-check"></i> Certificate criteria</div><h2 class="section-title">How your final score is calculated.</h2><p class="section-sub">Your final score combines the assignment component and the proctored exam. Both minimum eligibility rules must be met.</p></div><div class="score-total">100 marks total</div></div>
-    <div class="grade-bar" aria-label="Assignment score 25 percent, exam score 75 percent"><span class="assignment-part"></span><span class="exam-part"></span></div>
-    <div class="grade-intro"><span style="font-size:11px;color:#B5C0CE"><i data-lucide="check-circle-2" style="display:inline;width:15px;height:15px;vertical-align:middle;color:var(--mint)"></i> Assignment score contributes 25/100</span><span style="font-size:11px;color:#B5C0CE"><i data-lucide="check-circle-2" style="display:inline;width:15px;height:15px;vertical-align:middle;color:var(--coral)"></i> Exam score contributes 75/100</span></div>
-    <div class="grade-grid">
-      <article class="grade-card assignment"><div class="grade-top"><span class="grade-icon"><i data-lucide="notebook-pen"></i></span><span class="grade-number">25%</span></div><h3>Assignment score</h3><p>Based on the average of your best 8 assignments out of the 12 assignments in the course, weighted to a maximum of 25 marks. Assignments include all types available that week, such as quizzes, programming tasks and essay submissions.</p><div class="threshold">Minimum eligibility: 10 out of 25</div></article>
-      <article class="grade-card exam"><div class="grade-top"><span class="grade-icon"><i data-lucide="clipboard-check"></i></span><span class="grade-number">75%</span></div><h3>Proctored exam score</h3><p>Your in-person certification exam score out of 100 is weighted to a maximum of 75 marks in the final score.</p><div class="threshold">Minimum eligibility: 30 out of 75</div></article>
+      <div class="hero-meta">
+        <span><i data-lucide="layers"></i> 12 weeks · 120 MCQs</span>
+        <span><i data-lucide="calendar-days"></i> Exam date: 25 October 2026</span>
+      </div>
     </div>
-    <div class="eligibility-alert"><i data-lucide="shield-alert"></i><div><b>Important: both minimums are compulsory.</b><p>You are eligible for a certificate only if your assignment score is at least 10/25 <strong>and</strong> your exam score is at least 30/75. A final score of 40/100 or more does not qualify you if either minimum is missed.</p></div></div>
-  </div></section>
-  <section class="section" style="padding-top:20px"><div class="wrap"><div class="cert-grid">
-    <article class="cert-paper"><div class="cert-logos"><span class="logo-stub"><i data-lucide="graduation-cap"></i></span><span class="logo-stub"><i data-lucide="landmark"></i></span><span style="font-size:10px;font-weight:800;letter-spacing:.1em;color:#586276">NPTEL · IIT KHARAGPUR</span></div><h3>Your effort,<br>officially recognised.</h3><p>The e-certificate includes your name, photograph and final exam score with its breakup.</p><div class="cert-lines"><span></span><span></span><span></span></div><div style="margin-top:20px;display:flex;align-items:center;gap:8px;font-size:10px;font-weight:800;color:#3D6A52"><i data-lucide="badge-check" style="width:15px;height:15px"></i> E-VERIFIABLE CERTIFICATE</div></article>
-    <div class="cert-details">
-      <article class="detail"><span class="detail-icon"><i data-lucide="file-check-2"></i></span><div><b>Only an e-certificate is available</b><p>NPTEL will not dispatch hard copies of the certificate.</p></div></article>
-      <article class="detail"><span class="detail-icon"><i data-lucide="scan-qr-code"></i></span><div><b>Verify online</b><p>The certificate is e-verifiable at <a href="https://nptel.ac.in/noc" target="_blank" rel="noopener noreferrer">nptel.ac.in/noc ↗</a>.</p></div></article>
-      <article class="detail"><span class="detail-icon"><i data-lucide="clipboard-list"></i></span><div><b>Read the official form carefully</b><p>When registration opens, check the exam cities, centre instructions, fee payment and all conditions listed in the form.</p></div></article>
+  </section>
+
+  <section class="section" id="exam">
+    <div class="wrap">
+      <div class="section-heading">
+        <div class="section-kicker"><i data-lucide="calendar-clock"></i> Exam information</div>
+        <h2>Certification exam details</h2>
+        <p>The course is free to enrol in and learn from. If you want a certificate, you must register and attend the proctored exam in person at a designated exam centre.</p>
+      </div>
+      <div class="exam-grid">
+        <article class="info-card">
+          <div class="info-top"><span class="info-icon"><i data-lucide="calendar"></i></span><h3>Date and sessions</h3></div>
+          <div class="date">25 October 2026</div>
+          <div class="session-list">
+            <div class="session"><strong>Morning session</strong><span>9:00 AM – 12:00 noon</span></div>
+            <div class="session"><strong>Afternoon session</strong><span>2:00 PM – 5:00 PM</span></div>
+          </div>
+        </article>
+        <article class="info-card">
+          <div class="info-top"><span class="info-icon"><i data-lucide="wallet"></i></span><h3>Fee and registration</h3></div>
+          <div class="date">₹1,000 <span class="muted" style="font:500 12px 'DM Sans',sans-serif;letter-spacing:0">optional exam fee</span></div>
+          <p class="muted" style="font-size:12px;margin:0">The registration form URL has not been announced in the information provided. NPTEL says an announcement will be made when registration opens.</p>
+          <div class="callout"><i data-lucide="bell-ring"></i><p>Check the official course announcements for the form, payment instructions, exam cities and conditions. <a href="https://nptel.ac.in/" target="_blank" rel="noopener noreferrer">NPTEL website ↗</a></p></div>
+        </article>
+      </div>
     </div>
-  </div></div></section>
-  <section class="section" style="padding-top:6px"><div class="wrap"><div class="bottom-cta"><div><h2>Ready to put your prep to work?</h2><p>Start with the dashboard, pick a week, and turn ten small questions into one more confident exam day.</p></div><a class="btn" href="dashboard.html"><i data-lucide="layout-dashboard"></i> Go to dashboard <i data-lucide="arrow-right"></i></a></div></div></section>
+  </section>
+
+  <section class="section" id="criteria">
+    <div class="wrap">
+      <div class="section-heading">
+        <div class="section-kicker"><i data-lucide="badge-check"></i> Certificate eligibility</div>
+        <h2>How the final score works</h2>
+        <p>Final score = assignment score + exam score. You must meet both minimum eligibility criteria, even if your combined score is 40/100 or higher.</p>
+      </div>
+      <div class="score-bar" aria-label="Assignment component 25 percent, exam component 75 percent"><span class="assignment"></span><span class="exam"></span></div>
+      <div class="score-split">
+        <article class="score-card">
+          <div class="weight">25%</div><h3>Assignment score</h3>
+          <p>Based on the average of your best 8 assignments out of 12. This component contributes up to 25 marks. Assignments include quizzes, programming tasks and essay submissions for the week.</p>
+          <div class="threshold">Minimum required: 10 / 25</div>
+        </article>
+        <article class="score-card">
+          <div class="weight">75%</div><h3>Proctored exam score</h3>
+          <p>Your certification exam score out of 100 is weighted to contribute up to 75 marks to the final score.</p>
+          <div class="threshold">Minimum required: 30 / 75</div>
+        </article>
+      </div>
+      <div class="warning"><i data-lucide="shield-alert"></i><p><strong>Both minimums are compulsory.</strong> You are eligible for a certificate only if your assignment score is at least 10/25 and your exam component is at least 30/75. Missing either threshold means no certificate, regardless of the combined total.</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="certificate">
+    <div class="wrap">
+      <div class="section-heading">
+        <div class="section-kicker"><i data-lucide="file-check-2"></i> Certificate notes</div>
+        <h2>What you receive</h2>
+      </div>
+      <div class="certificate-row">
+        <article class="detail"><i data-lucide="user-round"></i><div><strong>Certificate details</strong><p>The certificate includes your name, photograph and final exam score with its breakup, along with NPTEL and IIT Kharagpur logos.</p></div></article>
+        <article class="detail"><i data-lucide="badge-check"></i><div><strong>Digital certificate only</strong><p>Only the e-certificate is issued. Hard copies are not dispatched. Verify certificates at <a href="https://nptel.ac.in/noc" target="_blank" rel="noopener noreferrer">nptel.ac.in/noc ↗</a>.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap cta-inner">
+      <div><h2>Ready to practise?</h2><p>Choose a week, answer the MCQs and revisit anything you get wrong.</p></div>
+      <a class="btn primary" href="dashboard.html"><i data-lucide="layout-dashboard"></i> Go to dashboard <i data-lucide="arrow-right"></i></a>
+    </div>
+  </section>
 </main>
-<footer><div class="wrap foot-inner"><div><div class="foot-credit">Built by Hrithik Burnwal</div><div style="margin-top:4px">Independent study tool · Not affiliated with NPTEL or SWAYAM.</div></div><div class="foot-links"><a href="dashboard.html">Dashboard</a><a href="practice.html">MCQ practice</a><a href="https://nptel.ac.in/noc" target="_blank" rel="noopener noreferrer">Certificate verification</a></div></div></footer>
+
+<footer>
+  <div class="wrap footer-row">
+    <div><div class="credit">Built by Hrithik Burnwal</div><div>Independent study tool · Not affiliated with NPTEL or SWAYAM.</div></div>
+    <div>Course details supplied by the user. Follow official NPTEL announcements for registration updates.</div>
+  </div>
+</footer>
 <script>if(window.lucide&&typeof window.lucide.createIcons==="function")window.lucide.createIcons();</script>
-</body></html>
+</body>
+</html>
